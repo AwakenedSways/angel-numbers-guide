@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>✦ ANGEL NUMBER DECODER · DEEP SYNCHRONICITY & DREAM INTERPRETATION ✦</title>
+    <title>✦ ANGEL NUMBER DECODER · COMPLETE SYNCHRONICITY MASTER ✦</title>
     <style>
         * {
             margin: 0;
@@ -214,6 +214,31 @@
             transform: translateY(-2px);
         }
         
+        .pattern-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(180, 150, 255, 0.2);
+        }
+        
+        .pattern-btn {
+            background: rgba(30, 25, 55, 0.6);
+            border: 1px solid #6a5a9a;
+            border-radius: 40px;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .pattern-btn:hover {
+            background: rgba(138, 106, 208, 0.4);
+            transform: translateY(-2px);
+        }
+        
         .synchronicity-note {
             background: linear-gradient(145deg, rgba(138, 106, 208, 0.12), rgba(100, 80, 160, 0.08));
             border-radius: 24px;
@@ -254,12 +279,12 @@
         }
         
         .number-display {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 700;
             background: linear-gradient(135deg, #ffdf8c, #ffc978, #ffb347);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 6px;
+            letter-spacing: 4px;
             font-family: monospace;
         }
         
@@ -304,33 +329,7 @@
             border: 1px solid rgba(180, 150, 255, 0.3);
         }
         
-        .dream-box .section-title {
-            border-left-color: #b090ff;
-            color: #c8b0ff;
-        }
-        
-        .dream-interpretation {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px dashed rgba(180, 150, 255, 0.3);
-        }
-        
-        .dream-scenario {
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 18px;
-            padding: 15px;
-            margin: 12px 0;
-            font-style: italic;
-        }
-        
-        .where-box {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .breakdown-box {
+        .pattern-box, .breakdown-box {
             background: rgba(0, 0, 0, 0.25);
             border-radius: 20px;
             padding: 18px;
@@ -368,9 +367,10 @@
         
         @media (max-width: 680px) {
             .input-group { flex-direction: column; }
-            .number-display { font-size: 2.2rem; letter-spacing: 3px; }
+            .number-display { font-size: 1.8rem; letter-spacing: 2px; }
             .result-header { flex-direction: column; align-items: flex-start; }
-            .section-title { font-size: 1rem; }
+            .pattern-buttons { gap: 8px; }
+            .pattern-btn { padding: 6px 12px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -387,38 +387,94 @@
                 <img src="https://i.ibb.co/qLvdSn6z/Green-Logo-Glow.png" alt="Logo" class="your-logo">
             </div>
             <div class="glyph-container">
-                <span class="glyph">🌀</span>
+                <span class="glyph">✨</span>
                 <span class="glyph">👁️</span>
                 <span class="glyph">✨</span>
             </div>
             <h1>ANGEL NUMBER DECODER</h1>
-            <div class="subtitle">✦ DEEP SYNCHRONICITY · DREAM INTERPRETATION · DIVINE GUIDANCE ✦</div>
+            <div class="subtitle">✦ COMPLETE SYNCHRONICITY GUIDE · 1-4 DIGIT MASTER ✦</div>
         </div>
         
         <div class="input-card">
             <div class="input-group">
                 <div class="input-field">
-                    <input type="text" id="numberInput" placeholder="Enter any number (0-999) ..." maxlength="3">
+                    <input type="text" id="numberInput" placeholder="Enter any number (0-9999) ..." maxlength="4">
                 </div>
                 <button class="search-btn" onclick="decodeNumber()">🔮 DECODE MESSAGE</button>
-                <button class="random-btn" onclick="randomNumber()">🎲 RANDOM ANGEL NUMBER</button>
+                <button class="random-btn" onclick="randomNumber()">🎲 RANDOM NUMBER</button>
+            </div>
+            <div class="pattern-buttons">
+                <button class="pattern-btn" onclick="quickDecode('1111')">1111</button>
+                <button class="pattern-btn" onclick="quickDecode('2222')">2222</button>
+                <button class="pattern-btn" onclick="quickDecode('3333')">3333</button>
+                <button class="pattern-btn" onclick="quickDecode('4444')">4444</button>
+                <button class="pattern-btn" onclick="quickDecode('5555')">5555</button>
+                <button class="pattern-btn" onclick="quickDecode('6666')">6666</button>
+                <button class="pattern-btn" onclick="quickDecode('7777')">7777</button>
+                <button class="pattern-btn" onclick="quickDecode('8888')">8888</button>
+                <button class="pattern-btn" onclick="quickDecode('9999')">9999</button>
+                <button class="pattern-btn" onclick="quickDecode('1234')">1234</button>
+                <button class="pattern-btn" onclick="quickDecode('1212')">1212</button>
+                <button class="pattern-btn" onclick="quickDecode('1313')">1313</button>
+                <button class="pattern-btn" onclick="quickDecode('1515')">1515</button>
+                <button class="pattern-btn" onclick="quickDecode('1616')">1616</button>
+                <button class="pattern-btn" onclick="quickDecode('1818')">1818</button>
+                <button class="pattern-btn" onclick="quickDecode('1010')">1010</button>
             </div>
             <div class="synchronicity-note">
-                <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "Meaningful coincidences are not mere chance. When you notice repeating numbers, the unconscious is communicating with the conscious. The number you see is a bridge between your inner world and the outer reality. What were you thinking? What were you feeling? That is where the personal message lives."
+                <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "Meaningful coincidences are not mere chance. When you notice repeating numbers—whether 1111, 222, 1212, or 1234—the universe is speaking directly to you. Pay attention to what you were thinking and feeling when you saw them."
             </div>
         </div>
         
         <div id="result" class="result-card"></div>
         
         <div class="footer">
-            <div>🌀 DOREEN VIRTUE'S ANGEL NUMBERS · JUNGIAN SYNCHRONICITY · DREAM ANALYSIS  👁️</div>
-            <div class="footnote">Numbers 0-999 · Deep Meanings · Dream Scenarios · Where & When They Appear</div>
+            <div>🌀 0-9999 · REPEATING NUMBERS · MIRROR NUMBERS · SEQUENTIAL PATTERNS · DREAM INTERPRETATIONS  👁️</div>
+            <div class="footnote">1111 · 2222 · 3333 · 4444 · 5555 · 6666 · 7777 · 8888 · 9999 · 1234 · 1212 · 1313 · 1515 · 1616 · 1818 · 1010 · and all 1-3 digit numbers</div>
         </div>
     </div>
 
     <script>
-        // ==================== COMPLETE DREAM-ENHANCED ANGEL NUMBER DATABASE ====================
+        // ==================== COMPLETE ANGEL NUMBER DATABASE ====================
+        // Single digits (0-9) with deep meanings
+        const singleDigitMeanings = {
+            0: { meaning: "God is speaking to you. Zero represents the endless circle of Omega — without beginning or end. Divine reassurance is being sent. This is a call to connect with your spiritual source and trust that you are never alone. The zero amplifies the energy of any number it appears with.", dream: "Dreaming of zeros often manifests as circles, rings, clocks, or empty spaces. The zero in dreams represents infinite potential, the womb of creation, or feeling the presence of the divine watching over you. If you see a clock at 12:00 or 0:00 in a dream, you're being asked to reset — to return to your spiritual center.", where: "You may see zeros on license plates (especially with repeating zeros), digital clocks at 12:00, price tags ending in .00, or phone numbers with multiple zeros. Each appearance is a reminder that the divine is present.", affirmation: "I am connected to the infinite source of love and wisdom. Divine guidance flows through me." },
+            1: { meaning: "Stay positive! Your thoughts are materializing rapidly. The number 1 is a powerful manifestation sign — what you focus on is coming into form. This is a call to monitor your thoughts and ensure you're focusing only on what you truly desire, not what you fear. New beginnings are on the horizon, and your leadership is needed.", dream: "When 1 appears in dreams, it often manifests as a single door, a solitary figure, a first-place award, or being alone in a meaningful way. Dreams of being first, winning, or standing alone in strength reflect the 1's energy. If you dream of a clock showing 1:11 or 11:11, it's a powerful manifestation portal opening in your life.", where: "You may notice 1 on clocks (especially 1:11), in addresses, on receipts, or as the first page number you open to. Repeating 1's are especially potent manifestation signs.", affirmation: "I am a co-creator with the universe. My positive thoughts manifest my dreams." },
+            2: { meaning: "Everything is working out for your highest good. Keep the faith and trust the process. The number 2 represents balance, partnership, and faith. Your prayers are being heard, and the angels are asking you to trust that the right people and circumstances are aligning. Patience is your ally now.", dream: "In dreams, 2 appears as pairs — two people, two paths, two doors, or a mirror image. Dreams of choosing between two options, reconciling opposites, or finding balance reflect the 2's energy. Seeing 2:22 on a dream clock is a powerful sign that you are in divine alignment.", where: "Watch for 2 on clocks (2:22), in phone numbers, or appearing twice in a row. These are gentle reminders to trust and have faith.", affirmation: "I trust that everything is unfolding perfectly for my highest good. I am in balance and harmony." },
+            3: { meaning: "The ascended masters are with you, helping you stay positive and aligned with your highest purpose. The number 3 connects you to spiritual teachers, guides, and enlightened beings who are supporting your creative expression and joyful expansion. Your prayers have been heard.", dream: "Dreams with 3 often feature groups of three (three guides, three paths, three gifts), triangles, or triple appearances. Seeing 3:33 on a dream clock is a direct sign that ascended masters are near. Dreams of teaching, being guided, or receiving wisdom reflect the 3's energy.", where: "3 appears on clocks (3:33), as triple numbers, or in sequences. When you see it, know that ascended masters are close.", affirmation: "I am guided and protected by ascended masters who love me unconditionally." },
+            4: { meaning: "The angels are surrounding you, offering love, protection, and guidance. You are not alone. The number 4 represents angelic presence, stability, and practical support. Your prayers are being answered, and the angels are helping you build a solid foundation.", dream: "In dreams, 4 appears as squares, houses, foundations, or four walls. Dreams of being protected, guided, or surrounded by loving light reflect the 4's energy. Seeing 4:44 on a dream clock is a powerful sign that angels are with you.", where: "You'll notice 4 on clocks (4:44), in addresses, on receipts. Repeated 4's are a strong sign of angelic presence.", affirmation: "I am surrounded by loving angels who guide and protect me. I am safe and supported." },
+            5: { meaning: "A significant change is occurring, always for the better. Embrace transformation with open arms. The number 5 represents freedom, adventure, and positive life changes. Your prayers for growth and expansion are being answered. Let go of the old and trust that what's coming is better.", dream: "Dreams with 5 often involve travel, movement, wings, or doors opening. Seeing 5:55 on a dream clock signals major transformation. Dreams of flying, leaving, or arriving at new destinations reflect the 5's energy.", where: "Watch for 5 on clocks (5:55), in prices, or as a repeating sequence. It's a sign that change is coming.", affirmation: "I welcome positive change and growth into my life with grace and excitement." },
+            6: { meaning: "Don't worry about material matters. Release financial fears to the angels and trust that your needs are met. The number 6 represents balance between material and spiritual, family harmony, and responsibility. Your prayers for provision are answered.", dream: "Dreams with 6 often involve home, family, children, or nurturing. Dreams of caring for others, home renovations, or family gatherings indicate that your foundation is being strengthened.", where: "6 appears on clocks (6:06, 6:36), in prices, or as a sequence. It's a reminder that your needs are met.", affirmation: "All my material needs are met abundantly. I release all worry and trust in divine provision." },
+            7: { meaning: "You are on the right path! Divine magic is supporting you and opening doors of opportunity. The number 7 represents spiritual awakening, inner wisdom, and divine guidance. Your intuition is strong, and you're being guided toward your highest good.", dream: "In dreams, 7 appears as books, temples, owls, or quiet contemplation. Seeing 7:77 (or 7:07, 7:17) on a dream clock is a sign of spiritual alignment. Dreams of studying, meditating, or receiving wisdom reflect the 7's energy.", where: "7 appears on clocks (7:07), in addresses, or as a repeating sequence. It's confirmation you're on the right path.", affirmation: "I am on the right path. Miracles are unfolding in my life. I trust my intuition." },
+            8: { meaning: "Abundance and prosperity are flowing to you. The infinite loops signify endless flow of money, time, and resources. The number 8 represents karma, abundance, and manifestation. Your prayers for provision and success are being answered.", dream: "Dreams with 8 often feature infinity symbols, wheels, coins, or cycles. Seeing 8:88 (or 8:08, 8:18) on a dream clock is a powerful prosperity sign. Dreams of wealth, success, or completion reflect the 8's energy.", where: "8 appears on clocks (8:08), in prices, or as a repeating sequence. It's a sign of abundance.", affirmation: "I am a magnet for abundance. Prosperity flows to me effortlessly from expected and unexpected sources." },
+            9: { meaning: "Get to work on your life purpose! You've completed the prerequisites. Stop procrastinating and take action. The number 9 represents completion, humanitarian service, and soul purpose. Your prayers to find meaningful work are answered.", dream: "In dreams, 9 appears as doorways, sunsets, completions, or releases. Seeing 9:99 (or 9:09, 9:19) on a dream clock signals that a cycle is ending. Dreams of finishing projects, helping others, or moving to the next phase reflect the 9's energy.", where: "9 appears on clocks (9:09), in dates, or as a repeating sequence. It's time to step into your purpose.", affirmation: "I am ready and willing to fulfill my divine life purpose. I step forward with courage and joy." }
+        };
         
+        // 4-digit repeating numbers (1111, 2222, etc.)
+        const fourDigitMeanings = {
+            "1111": { meaning: "A powerful manifestation portal is wide open! 1111 is one of the most significant angel numbers. It signals that your thoughts are manifesting instantly. What you were thinking at the moment you saw 1111 is coming into form. This is a wake-up call to monitor your thoughts closely. The universe is listening intently. Stay positive and focused only on what you truly desire.", dream: "Dreaming of 1111 is a profound spiritual awakening. Often appearing on clocks (11:11) or as a repeated sequence, this dream tells you that you're at a crossroads of manifestation. Your thoughts in the dream are particularly potent — they're creating your waking reality. Pay close attention to what you were thinking and feeling when 11:11 appeared.", where: "11:11 on clocks is the most common, but also on receipts, license plates, phone numbers. It often appears when you're thinking about something important.", affirmation: "I am a powerful manifestor. My thoughts create my reality with love and intention. I am aligned with my highest path." },
+            "2222": { meaning: "Trust the process completely! 2222 is a sign that everything is aligning perfectly behind the scenes. Your prayers have been heard, and the answers are on their way. This number asks you to have faith and patience. The right people, places, and opportunities are coming together. Do not force anything — allow divine timing to unfold.", dream: "2222 in dreams (22:22 on a dream clock) is a powerful reassurance. The dream is telling you that even if you can't see how, everything is working out. Trust that you are exactly where you need to be. The universe is orchestrating events for your highest good.", where: "22:22 on clocks, addresses, receipts. A sign to trust and release control.", affirmation: "I trust divine timing completely. Everything is unfolding perfectly for my highest good." },
+            "3333": { meaning: "The ascended masters are surrounding you with love and guidance. 3333 amplifies the message that spiritual teachers, guides, and enlightened beings are supporting your journey. You are being prepared to step into a teaching or healing role. Your prayers have been heard, and the masters are helping you manifest your highest purpose.", dream: "3333 in dreams (3:33) is a sign that ascended masters are working closely with you. You may dream of teachers, spiritual guides, or ancient wisdom. This dream indicates that you're being initiated into deeper spiritual understanding.", where: "3:33 on clocks, or any sequence with triple 3s. A sign of ascended master presence.", affirmation: "I am guided and protected by ascended masters. I am ready to receive their wisdom." },
+            "4444": { meaning: "Angels are everywhere around you! 4444 is one of the most powerful angelic signs. It confirms that you are completely surrounded, protected, and supported by a host of angels. You are never alone. The angels are helping you with every aspect of your life, especially with building a solid foundation. Give any worries to them.", dream: "4444 in dreams (4:44) is a direct message that angels are with you in the dream state. You may dream of wings, light, or protective figures. This dream is a comfort — you are being watched over and guided. Your prayers are being answered.", where: "4:44 on clocks, license plates, anywhere. A powerful sign of angelic presence.", affirmation: "Angels surround me with their loving presence. I am safe, protected, and guided." },
+            "5555": { meaning: "Major life transformation is upon you! 5555 signals that significant changes are happening — and they're all for the highest good. What is leaving your life is making space for something far better. Embrace change with an open heart. The old is falling away so the new can enter.", dream: "5555 in dreams (5:55) indicates that you're in the midst of a powerful life transition. You may dream of moving, traveling, or new beginnings. This dream is confirmation that change is necessary and beneficial. Trust the journey.", where: "5:55 on clocks, or any sequence with 5s. A sign of transformation.", affirmation: "I embrace positive change with courage and excitement. Something better is coming." },
+            "6666": { meaning: "Shift your focus from material worries to spiritual trust. 6666 is a gentle nudge to examine where you're placing your attention. If you've been anxious about money, career, or physical needs, the angels are reminding you that your Source is spiritual. Raise your thoughts to love, trust, and divine abundance. All is well.", dream: "6666 in dreams (6:66 appears as 6:06 or 6:36) is a call to balance. You may dream of material concerns, work, or responsibilities. The dream is asking you to release worry and trust that you are provided for.", where: "6:06 on clocks, or sequences with 6s. A call to refocus on spirit.", affirmation: "I release all worry and trust in divine abundance. I am supported in all ways." },
+            "7777": { meaning: "You are on the right path! 7777 is a powerful confirmation that you're aligned with your highest purpose. Divine magic is supporting you, and miracles are unfolding. This number is a huge thumbs-up from the universe — keep going! Your intuition is guiding you perfectly.", dream: "7777 in dreams (7:77 appears as 7:07 or 7:17) is a sign of spiritual alignment. You may dream of success, achievement, or spiritual breakthroughs. This dream confirms that you're exactly where you need to be.", where: "7:07 on clocks, or sequences with 7s. Confirmation you're aligned.", affirmation: "I am on the right path. Miracles are unfolding in my life." },
+            "8888": { meaning: "Abundance is flowing to you from all directions! 8888 is the ultimate prosperity sign. The infinite loops signify endless flow — money, time, love, and resources are coming. Open your arms to receive. Your financial worries are being resolved, and abundance is your birthright.", dream: "8888 in dreams (8:88 appears as 8:08 or 8:18) is a powerful prosperity sign. You may dream of receiving gifts, money, or completing successful projects. This dream indicates that financial blessings are on their way.", where: "8:08 on clocks, or sequences with 8s. A powerful abundance sign.", affirmation: "I am open to receiving infinite abundance. Money flows to me easily and freely." },
+            "9999": { meaning: "Completion and new beginnings! 9999 signals that a major cycle in your life is ending, and you're being called to step into your life purpose. The old is complete; the new is waiting. Stop procrastinating — the world needs your gifts now. Your soul mission is calling.", dream: "9999 in dreams (9:99 appears as 9:09 or 9:19) indicates that you're completing an important chapter. You may dream of endings, graduation, or new doors opening. This dream is a call to action — it's time to step into your purpose.", where: "9:09 on clocks, or sequences with 9s. Time to step into your purpose.", affirmation: "I am ready to fulfill my divine life purpose. I step forward with courage and joy." }
+        };
+        
+        // Special pattern meanings (1234, 1212, 1313, 1515, 1616, 1818, 1010)
+        const patternMeanings = {
+            "1234": { meaning: "A new chapter is beginning! 1234 is a sign of progression and forward movement. Things are lining up in perfect order. Take things one step at a time — you don't need to see the whole staircase, just the next step. Simplicity and clarity are your allies now.", dream: "1234 in dreams represents a journey or path. You may dream of walking, climbing stairs, or moving forward. This dream indicates that you're progressing exactly as you should. Trust the process, one step at a time.", where: "On clocks (12:34), receipts, or sequences. A sign of progression.", affirmation: "I trust the journey. One step at a time, I move forward with clarity and purpose." },
+            "1212": { meaning: "Balance and harmony are being restored. 1212 is a sign that your thoughts are manifesting, and you're being asked to stay balanced between your spiritual and material life. Keep your focus on what truly matters, and everything else will fall into place.", dream: "1212 in dreams (12:12) is a sign of alignment. You may dream of balance, harmony, or partnerships. This dream indicates that you're finding equilibrium in your life.", where: "12:12 on clocks, addresses. A sign of balance and manifestation.", affirmation: "I am balanced and aligned. My thoughts create harmony in my life." },
+            "1313": { meaning: "Ascended masters are helping you express your truth. 1313 combines the creativity of 3 with the leadership of 1, doubled. You're being supported to speak your truth, share your gifts, and step into your role as a teacher or healer.", dream: "1313 in dreams indicates spiritual guidance coming through your creativity. You may dream of art, teaching, or sharing wisdom. Your voice matters — speak it.", where: "13:13 on clocks, or sequences. A sign to express your truth.", affirmation: "I speak my truth with love and confidence. My voice matters." },
+            "1515": { meaning: "Major positive changes are coming! 1515 is a double 5 — transformation on multiple levels. Changes in career, relationships, or location may be imminent. Trust that these changes are leading you to a higher expression of yourself.", dream: "1515 in dreams indicates significant life transitions. You may dream of travel, new beginnings, or leaving the old behind. Embrace the adventure.", where: "15:15 on clocks, or sequences. A sign of transformation.", affirmation: "I welcome positive change. I am evolving into my highest self." },
+            "1616": { meaning: "Balance your material and spiritual life. 1616 reminds you that while the material world requires attention, your spiritual foundation is what truly supports you. Release financial worries and trust that you are provided for.", dream: "1616 in dreams asks you to examine where you're placing your trust. You may dream of money, home, or security. The angels remind you that your true security is spiritual.", where: "16:16 on clocks, or sequences. A sign to balance material and spirit.", affirmation: "I am supported in all ways. My true security comes from within." },
+            "1818": { meaning: "Abundance is flowing to you through your spiritual purpose. 1818 is a powerful sign that your life purpose work will also be financially rewarding. Follow your passion — the universe will support you. The doors to abundance are opening.", dream: "1818 in dreams indicates that prosperity is coming through your spiritual path. You may dream of success, recognition, or financial rewards. Trust that following your heart leads to abundance.", where: "18:18 on clocks, or sequences. A sign of abundance through purpose.", affirmation: "I am abundantly supported as I follow my spiritual path." },
+            "1010": { meaning: "Stay positive and focused! 1010 is a sign that your thoughts are manifesting rapidly. This is a wake-up call to monitor your thoughts and keep them aligned with your desires. New beginnings are on the horizon — be ready.", dream: "1010 in dreams (10:10) is a powerful manifestation sign. You may dream of clarity, new beginnings, or alignment. Your thoughts are creating your reality — choose them wisely.", where: "10:10 on clocks, receipts. A powerful manifestation sign.", affirmation: "I am a conscious creator. I focus only on what I desire." }
+        };
+        
+        // Helper functions
         function getNumberWord(n) {
             const words = {
                 0: "infinite potential, divine connection, spiritual awakening",
@@ -451,224 +507,19 @@
             return archetypes[num] || "your soul is communicating through symbolic imagery. Pay attention to the emotions in the dream.";
         }
         
-        function getDreamScenarios(num, digits) {
-            const scenarios = {
-                single: `When ${num} appears in dreams, it often manifests as a single prominent number — on a clock, a door, a ticket. The dream is asking you to pay attention to ${getNumberWord(num).split(',')[0]} in your waking life. What area of your life needs ${num === 1 ? 'a fresh start' : num === 2 ? 'more balance' : num === 3 ? 'creative expression' : num === 4 ? 'structure' : num === 5 ? 'freedom' : num === 6 ? 'heart-centered care' : num === 7 ? 'introspection' : num === 8 ? 'abundance' : num === 9 ? 'completion' : 'attention'}?`,
-                repeating: `Dreaming of repeating ${num}${num}${num} is a powerful sign. The number often appears on clocks (${num}:${num}${num}), in sequences, or as a count. This dream indicates that the message is urgent and amplified. ${num === 1 ? 'Your thoughts are manifesting instantly.' : num === 2 ? 'Trust the process completely.' : num === 3 ? 'The ascended masters are with you.' : num === 4 ? 'Angels surround you.' : num === 5 ? 'Major transformation is here.' : num === 6 ? 'Balance material and spiritual.' : num === 7 ? 'You are on the right path.' : num === 8 ? 'Abundance is flowing.' : num === 9 ? 'Complete and begin anew.' : 'The universe is speaking loudly.'}`,
-                sequential: `Dreaming of sequential numbers like ${digits[0]}${digits[1]}${digits[2]} suggests a journey or progression. The dream is showing you a path: from ${getNumberWord(digits[0]).split(',')[0]} through ${getNumberWord(digits[1]).split(',')[0]} to ${getNumberWord(digits[2]).split(',')[0]}. What stage of your life does this represent?`
-            };
+        function analyzePattern(numStr) {
+            const digits = numStr.split('').map(Number);
+            const allSame = digits.every(d => d === digits[0]);
+            const isAscending = digits.length === 4 && digits.every((d, i) => i === 0 || d === digits[i-1] + 1);
+            const isMirror = digits.length === 4 && digits[0] === digits[3] && digits[1] === digits[2];
+            const isPairRepeat = digits.length === 4 && digits[0] === digits[1] && digits[2] === digits[3] && digits[0] !== digits[2];
             
-            if (digits.length === 3 && digits[0] === digits[1] && digits[1] === digits[2]) {
-                return scenarios.repeating;
-            } else if (digits.length === 3 && digits[0] + 1 === digits[1] && digits[1] + 1 === digits[2]) {
-                return scenarios.sequential;
-            } else {
-                return scenarios.single;
-            }
-        }
-        
-        function getDreamSymbols(num) {
-            const symbols = {
-                1: "⛰️ mountains, sunrise, candles, keys, crowns, eagles",
-                2: "🌉 bridges, pairs, mirrors, scales, doves, yin-yang",
-                3: "🎨 rainbows, triangles, musical notes, butterflies, children",
-                4: "🏠 squares, trees, foundations, gardens, crystals",
-                5: "🦋 wings, roads, wind, stars, birds in flight",
-                6: "💝 hearts, roses, family gatherings, nests, circles",
-                7: "🔮 owls, books, temples, spirals, quiet waters",
-                8: "💰 infinity symbols, wheels, coins, labyrinths, golden light",
-                9: "🌅 sunsets, completion, doorways, release, doves"
-            };
-            return symbols[num] || "✨ symbols that speak to your soul — trust your intuition";
-        }
-        
-        // Core angel number meanings with expanded dream interpretations
-        const angelNumbers = {
-            0: { 
-                meaning: "God is speaking to you. The zero represents the endless circle of Omega — without beginning or end. Divine reassurance is being sent. This is a call to connect with your spiritual source and trust that you are never alone. The zero amplifies the energy of any number it appears with, magnifying its message.",
-                dream: "Dreaming of zeros often manifests as circles, rings, clocks, or empty spaces. The zero in dreams represents infinite potential, the womb of creation, or feeling the presence of the divine watching over you. If you see a clock at 12:00 or 0:00 in a dream, you're being asked to reset — to return to your spiritual center. Empty rooms or vast open spaces in dreams carry the zero's message of new beginnings and limitless possibility.",
-                where: "You may see zeros on license plates (especially with repeating zeros), digital clocks at 12:00, price tags ending in .00, or phone numbers with multiple zeros. Each appearance is a reminder that the divine is present and you are supported.",
-                affirmation: "I am connected to the infinite source of love and wisdom. Divine guidance flows through me. I am never alone."
-            },
-            1: { 
-                meaning: "Stay positive! Your thoughts are materializing rapidly. The number 1 is a powerful manifestation sign — what you focus on is coming into form. This is a call to monitor your thoughts and ensure you're focusing only on what you truly desire, not what you fear. New beginnings are on the horizon, and your leadership is needed.",
-                dream: "When 1 appears in dreams, it often manifests as a single door, a solitary figure, a first-place award, or being alone in a meaningful way. These dreams indicate you're being called to lead, to start something new, or to embrace your individuality. Dreams of being first, winning, or standing alone in strength reflect the 1's energy. If you dream of a clock showing 1:11 or 11:11, it's a powerful manifestation portal opening in your life.",
-                where: "You may notice 1 on clocks (especially 1:11), in addresses, on receipts, or as the first page number you open to. Repeating 1's are especially potent manifestation signs.",
-                affirmation: "I am a co-creator with the universe. My positive thoughts manifest my dreams. I embrace new beginnings with courage."
-            },
-            2: { 
-                meaning: "Everything is working out for your highest good. Keep the faith and trust the process. The number 2 represents balance, partnership, and faith. Your prayers are being heard, and the angels are asking you to trust that the right people and circumstances are aligning. Patience is your ally now.",
-                dream: "In dreams, 2 appears as pairs — two people, two paths, two doors, or a mirror image. Dreams of choosing between two options, reconciling opposites, or finding balance reflect the 2's energy. Seeing 2:22 on a dream clock is a powerful sign that you are in divine alignment. Dreams of partnerships, weddings, or collaborations suggest that the right connections are forming.",
-                where: "Watch for 2 on clocks (2:22), in phone numbers, or appearing twice in a row. These are gentle reminders to trust and have faith.",
-                affirmation: "I trust that everything is unfolding perfectly for my highest good. I am in balance and harmony."
-            },
-            3: { 
-                meaning: "The ascended masters are with you, helping you stay positive and aligned with your highest purpose. The number 3 connects you to spiritual teachers, guides, and enlightened beings who are supporting your creative expression and joyful expansion. Your prayers have been heard, and the masters are assisting you.",
-                dream: "Dreams with 3 often feature groups of three (three guides, three paths, three gifts), triangles, or triple appearances. Seeing 3:33 on a dream clock is a direct sign that ascended masters are near. Dreams of teaching, being guided, or receiving wisdom reflect the 3's energy. If you dream of a spiritual teacher, artist, or healer, you're being supported in your creative and spiritual growth.",
-                where: "3 appears on clocks (3:33), as triple numbers, or in sequences. When you see it, know that ascended masters are close.",
-                affirmation: "I am guided and protected by ascended masters who love me unconditionally. My creativity flows freely."
-            },
-            4: { 
-                meaning: "The angels are surrounding you, offering love, protection, and guidance. You are not alone. The number 4 represents angelic presence, stability, and practical support. Your prayers are being answered, and the angels are helping you build a solid foundation. Trust that you have all the support you need.",
-                dream: "In dreams, 4 appears as squares, houses, foundations, or four walls. Dreams of being protected, guided, or surrounded by loving light reflect the 4's energy. Seeing 4:44 on a dream clock is a powerful sign that angels are with you. Dreams of angels, guardians, or safe places indicate divine protection.",
-                where: "You'll notice 4 on clocks (4:44), in addresses, on receipts. Repeated 4's are a strong sign of angelic presence.",
-                affirmation: "I am surrounded by loving angels who guide and protect me. I am safe and supported."
-            },
-            5: { 
-                meaning: "A significant change is occurring, always for the better. Embrace transformation with open arms. The number 5 represents freedom, adventure, and positive life changes. Your prayers for growth and expansion are being answered. Let go of the old and trust that what's coming is better.",
-                dream: "Dreams with 5 often involve travel, movement, wings, or doors opening. Seeing 5:55 on a dream clock signals major transformation. Dreams of flying, leaving, or arriving at new destinations reflect the 5's energy. If you dream of a journey or a significant change, your life is about to shift in positive ways.",
-                where: "Watch for 5 on clocks (5:55), in prices, or as a repeating sequence. It's a sign that change is coming.",
-                affirmation: "I welcome positive change and growth into my life with grace and excitement. I am free."
-            },
-            6: { 
-                meaning: "Don't worry about material matters. Release financial fears to the angels and trust that your needs are met. The number 6 represents balance between material and spiritual, family harmony, and responsibility. Your prayers for provision are answered.",
-                dream: "Dreams with 6 often involve home, family, children, or nurturing. Seeing 6:66 (or 6:66 on a digital clock is 6:06? Actually 6:66 doesn't exist — but 6:06 or 6:36) reflects the 6's energy. Dreams of caring for others, home renovations, or family gatherings indicate that your foundation is being strengthened.",
-                where: "6 appears on clocks (6:06, 6:36), in prices, or as a sequence. It's a reminder that your needs are met.",
-                affirmation: "All my material needs are met abundantly. I release all worry and trust in divine provision."
-            },
-            7: { 
-                meaning: "You are on the right path! Divine magic is supporting you and opening doors of opportunity. The number 7 represents spiritual awakening, inner wisdom, and divine guidance. Your intuition is strong, and you're being guided toward your highest good. Trust your inner knowing.",
-                dream: "In dreams, 7 appears as books, temples, owls, or quiet contemplation. Seeing 7:77 (or 7:07, 7:17) on a dream clock is a sign of spiritual alignment. Dreams of studying, meditating, or receiving wisdom reflect the 7's energy. If you dream of a spiritual teacher, a library, or a sacred space, you're being guided to trust your intuition.",
-                where: "7 appears on clocks (7:07), in addresses, or as a repeating sequence. It's confirmation you're on the right path.",
-                affirmation: "I am on the right path. Miracles are unfolding in my life. I trust my intuition."
-            },
-            8: { 
-                meaning: "Abundance and prosperity are flowing to you. The infinite loops signify endless flow of money, time, and resources. The number 8 represents karma, abundance, and manifestation. Your prayers for provision and success are being answered. Open your arms to receive.",
-                dream: "Dreams with 8 often feature infinity symbols, wheels, coins, or cycles. Seeing 8:88 (or 8:08, 8:18) on a dream clock is a powerful prosperity sign. Dreams of wealth, success, or completion reflect the 8's energy. If you dream of receiving money, achieving a goal, or completing a cycle, abundance is flowing.",
-                where: "8 appears on clocks (8:08), in prices, or as a repeating sequence. It's a sign of abundance.",
-                affirmation: "I am a magnet for abundance. Prosperity flows to me effortlessly from expected and unexpected sources."
-            },
-            9: { 
-                meaning: "Get to work on your life purpose! You've completed the prerequisites. Stop procrastinating and take action. The number 9 represents completion, humanitarian service, and soul purpose. Your prayers to find meaningful work are answered. Step into your calling.",
-                dream: "In dreams, 9 appears as doorways, sunsets, completions, or releases. Seeing 9:99 (or 9:09, 9:19) on a dream clock signals that a cycle is ending. Dreams of finishing projects, helping others, or moving to the next phase reflect the 9's energy. If you dream of graduating, completing a journey, or letting go, you're ready for your purpose.",
-                where: "9 appears on clocks (9:09), in dates, or as a repeating sequence. It's time to step into your purpose.",
-                affirmation: "I am ready and willing to fulfill my divine life purpose. I step forward with courage and joy."
-            },
-            11: {
-                meaning: "Stay positive! Your thoughts are manifesting instantly. The number 11 is a master number of spiritual awakening and manifestation. Focus only on what you desire. Your thoughts are creating your reality right now, so keep them elevated.",
-                dream: "Dreaming of 11:11 is one of the most powerful spiritual signs. It often appears on clocks, in sequences, or as a significant number in dreams. This dream indicates that you're in alignment with your soul's purpose. A portal of manifestation is opening. Pay close attention to your thoughts and feelings in the dream — they're manifesting in waking life.",
-                where: "11:11 on clocks is the most common, but also on receipts, addresses, or anywhere numbers appear. It's a wake-up call to watch your thoughts.",
-                affirmation: "I am a powerful manifestor. I create my reality with intention and joy."
-            },
-            22: {
-                meaning: "Keep the faith! The angels see the positive results of your prayers. Be patient while details are worked out. 22 is a master builder number — you're creating something lasting and significant. Trust divine timing.",
-                dream: "Dreaming of 22 suggests you're building something important. It may appear as a house number, a clock time (22:22), or a significant count. This dream indicates that your foundation is solid, and the structure you're creating will stand the test of time. The angels are helping you build something meaningful.",
-                where: "22:22 on clocks, address numbers, or anywhere the master builder number appears.",
-                affirmation: "I trust divine timing. Everything is working out perfectly for my highest good."
-            },
-            33: {
-                meaning: "You have a strong connection with ascended masters who have answered your prayers. 33 is the master teacher number — you're being guided to teach, heal, and uplift others through your example.",
-                dream: "Dreaming of 33 often involves teachers, guides, or spiritual instruction. It may appear as a clock time (3:33), in sequences, or as a significant number. This dream indicates that ascended masters are working closely with you. You're being prepared to share your wisdom with others.",
-                where: "3:33 on clocks, repeating 33s in sequences. A sign of ascended master presence.",
-                affirmation: "I am connected to the highest spiritual guidance. I teach through love and example."
-            },
-            44: {
-                meaning: "Angels are everywhere around you! You are completely loved, supported, and protected. 44 is a powerful angelic sign — you're surrounded by guardian angels who are helping you with every aspect of your life.",
-                dream: "Dreaming of 44 often features angels, protectors, or safe places. It may appear as 4:44 on a clock, as a house number, or in sequences. This dream is a direct message that you're being watched over. You are never alone, and divine protection surrounds you always.",
-                where: "4:44 on clocks, addresses, license plates. A powerful sign of angelic presence.",
-                affirmation: "Angels surround me with their loving presence. I am safe, protected, and guided."
-            },
-            55: {
-                meaning: "Big, positive changes are imminent. The worst is now behind you. 55 represents transformation on all levels — what's leaving is making space for something far better.",
-                dream: "Dreaming of 55 often involves movement, change, or new horizons. It may appear as 5:55 on a clock, a flight number, or a significant count. This dream indicates that a major life transition is underway. Trust the process — the changes are leading you to your highest good.",
-                where: "5:55 on clocks, addresses, or sequences. A sign of transformation.",
-                affirmation: "I embrace positive change with courage and excitement. Something better is coming."
-            },
-            77: {
-                meaning: "Keep up the great work! Everything you're doing right now has the Midas touch. 77 is a sign that you're in perfect alignment with your highest path. Miracles are unfolding.",
-                dream: "Dreaming of 77 often features success, achievement, or spiritual breakthroughs. It may appear as 7:77 (7:07 or 7:17), as a winning number, or in sequences. This dream confirms you're on the right path. Trust your inner guidance — it's leading you exactly where you need to be.",
-                where: "7:07 on clocks, 77 on license plates, or in sequences. Confirmation you're aligned.",
-                affirmation: "I am in perfect alignment with my highest path. Miracles are unfolding."
-            },
-            88: {
-                meaning: "You have the Midas touch! Financial abundance is flowing to you right now. 88 is the abundance number — infinite loops of prosperity are opening.",
-                dream: "Dreaming of 88 often features wealth, abundance, or receiving gifts. It may appear as 8:88 (8:08 or 8:18), as a winning number, or in sequences. This dream indicates that financial blessings are on their way. Open your arms to receive.",
-                where: "8:08 on clocks, 88 on receipts, or in sequences. A powerful abundance sign.",
-                affirmation: "I am open to receiving infinite abundance in all forms. Money flows to me easily."
-            },
-            99: {
-                meaning: "This is a wake-up call! Complete old chapters and begin your life purpose work now. 99 signifies completion and the call to serve your soul mission.",
-                dream: "Dreaming of 99 often features endings, completions, or new beginnings. It may appear as 9:99 (9:09 or 9:19), as a countdown, or in sequences. This dream indicates that you've completed a major cycle. It's time to step into your purpose without delay.",
-                where: "9:09 on clocks, 99 on addresses, or in sequences. Time to step into your purpose.",
-                affirmation: "I am ready to fulfill my divine life purpose. I step forward with courage."
-            },
-            111: {
-                meaning: "Your thoughts are manifesting instantly. Keep your mindset focused on your desires. 111 is a powerful manifestation portal — what you think about, you bring about. Choose your thoughts with care.",
-                dream: "111 in dreams is a major spiritual awakening sign. It often appears as 1:11 on a dream clock, as a significant count, or repeating throughout the dream. This dream is telling you that you're a powerful manifestor. Your thoughts are creating reality rapidly. Pay attention to your inner dialogue — it's becoming your outer world.",
-                where: "1:11 on clocks, addresses, receipts — a sign that manifestation is instant.",
-                affirmation: "I am a powerful creator. My thoughts shape my reality with love and intention."
-            },
-            222: {
-                meaning: "Trust that everything is working out exactly as it's supposed to, with Divine blessings. 222 is a sign of faith, trust, and divine timing.",
-                dream: "222 in dreams suggests perfect alignment. It may appear as 2:22 on a dream clock, as a pairing of twos, or as a count. This dream is reassuring you that even if you can't see how, everything is unfolding perfectly. The right people, places, and circumstances are aligning for your highest good.",
-                where: "2:22 on clocks, phone numbers, sequences — trust the process.",
-                affirmation: "I trust the divine plan for my life. Everything is unfolding perfectly."
-            },
-            333: {
-                meaning: "You are surrounded by ascended masters who are guiding and protecting you. 333 is a sign that spiritual teachers are near, offering wisdom and support.",
-                dream: "333 in dreams often features spiritual guides, teachers, or sacred spaces. It may appear as 3:33 on a dream clock, as three of something, or as a significant count. This dream indicates that you're receiving guidance from ascended masters. Pay attention to your intuition — it's being amplified.",
-                where: "3:33 on clocks, in sequences — ascended masters are near.",
-                affirmation: "I am guided and protected by ascended masters who love me unconditionally."
-            },
-            444: {
-                meaning: "Angels are everywhere around you! You are completely loved and supported. 444 is a powerful angelic sign of protection and presence.",
-                dream: "444 in dreams is one of the most common angel signs. It often appears as 4:44 on a dream clock, as four of something, or as a count. This dream is a direct message that angels are with you. You are never alone. Divine protection surrounds you at all times.",
-                where: "4:44 on clocks, license plates, anywhere — angels are with you.",
-                affirmation: "Angels surround me with their loving presence. I am safe and protected."
-            },
-            555: {
-                meaning: "Big, positive changes are occurring. Release the old and welcome the new. 555 is a sign of major transformation.",
-                dream: "555 in dreams often involves movement, change, or new directions. It may appear as 5:55 on a dream clock, as a countdown, or as a sequence. This dream indicates that significant change is underway. What's leaving is making space for something far better. Trust the transformation.",
-                where: "5:55 on clocks, addresses — change is coming, embrace it.",
-                affirmation: "I welcome transformation and growth into my life with an open heart."
-            },
-            666: {
-                meaning: "Your thoughts are too focused on material illusions. Raise your thoughts spiritually. 666 is a call to balance material concerns with spiritual trust.",
-                dream: "666 in dreams is a gentle wake-up call. It may appear as 6:66 (6:06 or 6:36) on a dream clock, or in sequences. This dream is asking you to examine where you're focused on fear or lack. The angels are reminding you that your Source is spiritual, not material. Raise your thoughts to love and trust.",
-                where: "6:06 on clocks, sequences — a call to refocus on spirit.",
-                affirmation: "I release all worry and trust in divine abundance. I am supported in all ways."
-            },
-            777: {
-                meaning: "You are on the right path! Divine magic is supporting you and opening doors. 777 is a sign of spiritual alignment and miracles.",
-                dream: "777 in dreams is a powerful confirmation. It may appear as 7:77 (7:07 or 7:17) on a dream clock, as a winning number, or in sequences. This dream is telling you that you're exactly where you need to be. Keep going — miracles are unfolding.",
-                where: "7:07 on clocks, sequences — confirmation you're aligned.",
-                affirmation: "I am on the right path. Miracles are unfolding in my life."
-            },
-            888: {
-                meaning: "You have the Midas touch! Financial abundance is flowing to you right now. 888 is a sign of infinite prosperity.",
-                dream: "888 in dreams is a powerful abundance sign. It may appear as 8:88 (8:08 or 8:18) on a dream clock, as a winning number, or in sequences. This dream indicates that financial blessings are flowing. Open your arms to receive. Your prayers for provision are answered.",
-                where: "8:08 on clocks, receipts — abundance is yours.",
-                affirmation: "I am open to receiving infinite abundance. Money flows to me easily and freely."
-            },
-            999: {
-                meaning: "This is a wake-up call! Complete old chapters and begin your life purpose work now. 999 is a sign of completion and new beginnings.",
-                dream: "999 in dreams is a powerful call to action. It may appear as 9:99 (9:09 or 9:19) on a dream clock, as a countdown, or in sequences. This dream indicates that you've completed a major cycle. It's time to step into your life purpose without delay. The world needs your gifts now.",
-                where: "9:09 on clocks, sequences — time to step into purpose.",
-                affirmation: "I am ready to fulfill my divine life purpose. I step forward with courage and joy."
-            }
-        };
-        
-        function generateAllNumbers() {
-            for (let i = 0; i <= 999; i++) {
-                if (!angelNumbers[i]) {
-                    const digits = String(i).split('').map(Number);
-                    const sum = digits.reduce((a, b) => a + b, 0);
-                    const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
-                    const base = angelNumbers[reduced] || angelNumbers[digits[0]] || angelNumbers[0];
-                    
-                    let meaning = `The number ${i} combines the energies of ${digits.map(d => getNumberWord(d).split(',')[0]).join(', ')}. `;
-                    meaning += base.meaning.split('.')[0] + " This unique combination is a personal message from your angels. Pay attention to what you were thinking when you saw this number.";
-                    
-                    let dream = `When ${i} appears in dreams, consider each digit's symbolism. ${getDreamScenarios(i, digits)} ${getDreamArchetype(reduced)} `;
-                    dream += `The dream may also show ${getDreamSymbols(reduced)}. What were you feeling in the dream? That's where the personal message lives.`;
-                    
-                    let where = `You may see ${i} on clocks, receipts, license plates, or anywhere numbers appear. It's most significant when you're thinking about something important. The more you notice it, the more urgent the message.`;
-                    
-                    let affirmation = `I am open to the guidance of this number. I trust that ${getNumberWord(reduced).split(',')[0]} is supporting my highest good.`;
-                    
-                    angelNumbers[i] = { meaning, dream, where, affirmation };
-                }
-            }
+            let patternDesc = "";
+            if (allSame && digits.length === 4) patternDesc = "✨ REPEATING NUMBER SEQUENCE — This is a powerful amplified message! The angels are speaking loudly. Pay extra attention to your thoughts when you see this number.";
+            else if (isAscending) patternDesc = "📈 ASCENDING SEQUENCE — Things are moving forward in perfect order. Take one step at a time and trust the progression.";
+            else if (isMirror) patternDesc = "🪞 MIRROR NUMBER — What you see reflected is what you're manifesting. Your outer world mirrors your inner state.";
+            else if (isPairRepeat) patternDesc = "🔁 PAIRED REPEAT — Balance and harmony are being restored. Two energies are coming together in alignment.";
+            return patternDesc;
         }
         
         function decodeNumber() {
@@ -678,61 +529,110 @@
                 return;
             }
             
-            let num = parseInt(input, 10);
-            if (isNaN(num)) {
+            let numStr = input.replace(/[^0-9]/g, '');
+            if (numStr.length === 0) {
                 alert("Please enter a valid number.");
                 return;
             }
             
-            if (num < 0) num = Math.abs(num);
-            
-            generateAllNumbers();
-            
-            if (num > 999) {
-                const str = String(num);
+            // For numbers > 9999, show multi-part message
+            if (numStr.length > 4) {
                 const chunks = [];
-                for (let i = 0; i < str.length; i += 3) {
-                    chunks.push(parseInt(str.substr(i, 3), 10));
+                for (let i = 0; i < numStr.length; i += 4) {
+                    chunks.push(numStr.substr(i, 4));
                 }
-                if (chunks.length > 1) {
-                    showMultiDigitResult(chunks);
-                    return;
-                }
+                showMultiChunkResult(chunks);
+                return;
             }
             
-            const data = angelNumbers[num] || angelNumbers[0];
-            const digits = String(num).split('').map(Number);
+            // Check for 4-digit patterns
+            if (fourDigitMeanings[numStr]) {
+                const data = fourDigitMeanings[numStr];
+                const digits = numStr.split('').map(Number);
+                const sum = digits.reduce((a, b) => a + b, 0);
+                const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
+                const patternDesc = analyzePattern(numStr);
+                
+                const html = generateResultHTML(numStr, data.meaning, data.dream, data.where, data.affirmation, digits, sum, reduced, patternDesc, "4-DIGIT MASTER SEQUENCE");
+                document.getElementById('result').innerHTML = html;
+                document.getElementById('result').classList.add('show');
+                document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+            
+            // Check for special patterns (1234, 1212, etc.)
+            if (patternMeanings[numStr]) {
+                const data = patternMeanings[numStr];
+                const digits = numStr.split('').map(Number);
+                const sum = digits.reduce((a, b) => a + b, 0);
+                const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
+                const patternDesc = analyzePattern(numStr);
+                
+                const html = generateResultHTML(numStr, data.meaning, data.dream, data.where, data.affirmation, digits, sum, reduced, patternDesc, "✨ PATTERN SEQUENCE ✨");
+                document.getElementById('result').innerHTML = html;
+                document.getElementById('result').classList.add('show');
+                document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                return;
+            }
+            
+            // For 1-3 digit numbers
+            let data;
+            if (numStr.length === 1 && singleDigitMeanings[parseInt(numStr)]) {
+                data = singleDigitMeanings[parseInt(numStr)];
+            } else {
+                // Generate composite meaning for other numbers
+                const digits = numStr.split('').map(Number);
+                const num = parseInt(numStr, 10);
+                const sum = digits.reduce((a, b) => a + b, 0);
+                const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
+                const baseData = singleDigitMeanings[reduced] || singleDigitMeanings[digits[0]] || singleDigitMeanings[0];
+                
+                data = {
+                    meaning: `The number ${numStr} combines the energies of ${digits.map(d => getNumberWord(d).split(',')[0]).join(', ')}. ${baseData.meaning.split('.')[0]} This unique combination is a personal message from your angels. Pay attention to what you were thinking when you saw this number.`,
+                    dream: `When ${numStr} appears in dreams, consider each digit's symbolism. ${getDreamArchetype(reduced)} What were you feeling in the dream? That's where the personal message lives.`,
+                    where: `You may see ${numStr} on clocks, receipts, license plates, or anywhere numbers appear. It's most significant when you're thinking about something important.`,
+                    affirmation: `I am open to the guidance of this number. I trust that ${getNumberWord(reduced).split(',')[0]} is supporting my highest good.`
+                };
+            }
+            
+            const digits = numStr.split('').map(Number);
             const sum = digits.reduce((a, b) => a + b, 0);
             const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
-            const isRepeating = digits.length === 3 && digits[0] === digits[1] && digits[1] === digits[2];
-            const isSequential = digits.length === 3 && digits[0] + 1 === digits[1] && digits[1] + 1 === digits[2];
+            const patternDesc = analyzePattern(numStr);
             
-            const html = `
+            const html = generateResultHTML(numStr, data.meaning, data.dream, data.where, data.affirmation, digits, sum, reduced, patternDesc, "ANGEL NUMBER");
+            document.getElementById('result').innerHTML = html;
+            document.getElementById('result').classList.add('show');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function generateResultHTML(numStr, meaning, dream, where, affirmation, digits, sum, reduced, patternDesc, badgeText) {
+            return `
                 <div class="result-header">
-                    <div class="number-display">${num}</div>
-                    <div class="angel-badge">✦ ANGEL NUMBER ✦</div>
+                    <div class="number-display">${numStr}</div>
+                    <div class="angel-badge">✦ ${badgeText} ✦</div>
                 </div>
                 <div class="result-content">
                     <div class="section">
                         <div class="section-title">🔮 DIVINE MESSAGE</div>
-                        <div class="meaning-text">${data.meaning}</div>
+                        <div class="meaning-text">${meaning}</div>
                     </div>
+                    
+                    ${patternDesc ? `<div class="pattern-box"><strong>🔍 PATTERN INSIGHT:</strong><br>${patternDesc}</div>` : ''}
                     
                     <div class="dream-box">
                         <div class="section-title">💭 DREAM INTERPRETATION</div>
-                        <div class="meaning-text">${data.dream}</div>
-                        <div class="dream-interpretation">
-                            <strong>🌙 WHAT THIS DREAM MEANS FOR YOU:</strong><br>
-                            ${getDreamArchetype(reduced)}<br><br>
-                            <strong>✨ DREAM SYMBOLS:</strong> ${getDreamSymbols(reduced)}<br><br>
-                            <strong>🔍 DREAM SCENARIO:</strong> ${getDreamScenarios(num, digits)}
+                        <div class="meaning-text">${dream}</div>
+                        <div style="margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 16px;">
+                            <strong>🌙 DREAM SYMBOLS FOR THIS NUMBER:</strong><br>
+                            ${getDreamArchetype(reduced)}
                         </div>
                     </div>
                     
-                    <div class="where-box">
-                        <div class="section-title">👁️ WHERE & WHEN YOU SEE IT</div>
-                        <div class="meaning-text">${data.where}</div>
-                        <div style="margin-top: 15px; padding: 12px; background: rgba(255,215,0,0.1); border-radius: 16px;">
+                    <div class="pattern-box">
+                        <div class="section-title">👁️ WHERE YOU SEE IT</div>
+                        <div class="meaning-text">${where}</div>
+                        <div style="margin-top: 12px; padding: 10px; background: rgba(255,215,0,0.1); border-radius: 16px;">
                             <strong>✨ JUNGIAN SYNCHRONICITY:</strong> "This number appeared when you were thinking about something meaningful. Carl Jung believed that meaningful coincidences are not chance — they are the universe communicating. What were you feeling? What were you thinking? That's where your personal message lives."
                         </div>
                     </div>
@@ -740,31 +640,24 @@
                     <div class="breakdown-box">
                         <div class="section-title">🔢 NUMEROLOGICAL BREAKDOWN</div>
                         <div class="meaning-text">
-                            <strong>${num}</strong> = ${digits.join(' + ')} = <strong>${sum}</strong>${sum > 9 ? ` = ${String(sum).split('').join(' + ')} = <strong>${reduced}</strong>` : ''}<br>
-                            <span style="color: #ffdf8c;">The reduced energy of ${reduced} brings: ${getNumberWord(reduced)}</span><br><br>
-                            ${isRepeating ? '<strong>⚠️ REPEATING NUMBER:</strong> This is an amplified message! The angels are speaking loudly. Pay extra attention.' : ''}
-                            ${isSequential ? '<strong>📈 SEQUENTIAL NUMBER:</strong> This indicates a journey or progression. You are moving from one stage to the next.' : ''}
+                            <strong>${numStr}</strong> = ${digits.join(' + ')} = <strong>${sum}</strong>${sum > 9 ? ` = ${String(sum).split('').join(' + ')} = <strong>${reduced}</strong>` : ''}<br>
+                            <span style="color: #ffdf8c;">The reduced energy of ${reduced} brings: ${getNumberWord(reduced)}</span>
                         </div>
                     </div>
                     
                     <div class="affirmation-box">
                         <strong>✨ AFFIRMATION FOR THIS MESSAGE:</strong><br>
-                        "${data.affirmation}"
+                        "${affirmation}"
                     </div>
                     
                     <div class="jung-quote">
-                        <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "Meaningful coincidences are not chance. When you notice numbers repeating, your unconscious is trying to communicate. The number ${num} is a bridge between your inner world and the outer reality. What were you thinking? What were you feeling? That's where the message lives. Trust it."
+                        <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "When a number like ${numStr} appears, the universe is speaking. This is a meaningful coincidence, a bridge between your inner world and outer reality. What were you thinking? What were you feeling? That's where your personal message lives."
                     </div>
                 </div>
             `;
-            
-            document.getElementById('result').innerHTML = html;
-            document.getElementById('result').classList.add('show');
-            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        function showMultiDigitResult(chunks) {
-            generateAllNumbers();
+        function showMultiChunkResult(chunks) {
             let html = `
                 <div class="result-header">
                     <div class="number-display">${chunks.join(' ')}</div>
@@ -772,35 +665,34 @@
                 </div>
                 <div class="result-content">
                     <div class="section">
-                        <div class="section-title">🔮 YOUR COMPLETE ANGEL MESSAGE</div>
-                        <div class="meaning-text">Your angel number is composed of multiple sequences. Here's what each part means:</div>
+                        <div class="section-title">🔮 YOUR COMPLETE MESSAGE</div>
+                        <div class="meaning-text">Your number is composed of multiple sequences. Here's what each part means:</div>
                     </div>
             `;
             
             for (let i = 0; i < chunks.length; i++) {
                 const chunk = chunks[i];
-                const data = angelNumbers[chunk] || angelNumbers[0];
+                let data;
+                if (fourDigitMeanings[chunk]) data = fourDigitMeanings[chunk];
+                else if (patternMeanings[chunk]) data = patternMeanings[chunk];
+                else if (chunk.length === 1 && singleDigitMeanings[parseInt(chunk)]) data = singleDigitMeanings[parseInt(chunk)];
+                else data = { meaning: `The number ${chunk} carries its own unique vibration. Pay attention to what you were thinking when you saw it.` };
+                
                 html += `
                     <div style="background: rgba(138, 106, 208, 0.15); border-radius: 20px; padding: 18px; margin: 15px 0; border-left: 3px solid #ffd966;">
-                        <strong style="color: #ffd966; font-size: 1.2rem;">${chunk}</strong><br>
+                        <strong style="color: #ffd966; font-size: 1.1rem;">${chunk}</strong><br>
                         ${data.meaning.split('.')[0]}.
                     </div>
                 `;
             }
             
             html += `
-                    <div class="dream-box" style="margin-top: 20px;">
-                        <div class="section-title">💭 WHEN THESE NUMBERS APPEAR IN DREAMS</div>
-                        <div class="meaning-text">Seeing multiple numbers together in a dream suggests the universe is sending a layered message. Each number carries its own symbolism, and together they form a complete picture. Pay attention to the order they appear — it may show a sequence or progression in your life.</div>
-                    </div>
-                    
                     <div class="affirmation-box">
                         <strong>✨ INTEGRATED AFFIRMATION:</strong><br>
                         "I am open to receiving the complete message the universe is sending me. I trust that all the pieces are coming together for my highest good."
                     </div>
-                    
                     <div class="jung-quote">
-                        <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "The larger the pattern, the more significant the synchronicity. When multiple numbers appear together, the universe is amplifying its message. What were you thinking? That's where your answer lies."
+                        <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "The larger the pattern, the more significant the synchronicity. When multiple numbers appear together, the universe is amplifying its message."
                     </div>
                 </div>
             `;
@@ -810,9 +702,15 @@
             document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
-        function randomNumber() {
-            const num = Math.floor(Math.random() * 1000);
+        function quickDecode(num) {
             document.getElementById('numberInput').value = num;
+            decodeNumber();
+        }
+        
+        function randomNumber() {
+            const allPatterns = ['1111', '2222', '3333', '4444', '5555', '6666', '7777', '8888', '9999', '1234', '1212', '1313', '1515', '1616', '1818', '1010', '111', '222', '333', '444', '555', '666', '777', '888', '999', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+            const randomPattern = allPatterns[Math.floor(Math.random() * allPatterns.length)];
+            document.getElementById('numberInput').value = randomPattern;
             decodeNumber();
         }
         
@@ -834,7 +732,6 @@
             }
         }
         
-        generateAllNumbers();
         generateStars();
         
         document.getElementById('numberInput').addEventListener('keypress', function(e) {
