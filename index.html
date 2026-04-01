@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>✦ CHAKRA HEALING GUIDE · COMPLETE ASSESSMENT ✦</title>
+    <title>✦ ANGEL NUMBER DECODER · DEEP SYNCHRONICITY & DREAM INTERPRETATION ✦</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
         }
         
         body {
-            background: #03020a;
+            background: radial-gradient(ellipse at 30% 20%, #0a0818 0%, #0f0e1f 40%, #050410 100%);
             min-height: 100vh;
             padding: 20px 15px;
-            color: #e0e5f0;
-            line-height: 1.6;
+            color: #ece8ff;
+            line-height: 1.7;
             position: relative;
-            overflow-x: hidden;
         }
         
-        /* DYNAMIC ORB BACKGROUND */
-        .orb-background {
+        .celestial-bg {
             position: fixed;
             top: 0;
             left: 0;
@@ -31,39 +29,33 @@
             bottom: 0;
             z-index: 0;
             pointer-events: none;
-            overflow: hidden;
         }
         
         .glowing-orb {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80vmin;
-            height: 80vmin;
+            top: 15%;
+            right: -5%;
+            width: 70vmin;
+            height: 70vmin;
             border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,200,100,0.12), rgba(180,130,255,0.05));
+            filter: blur(70px);
+            animation: drift 25s infinite alternate;
+        }
+        
+        .glowing-orb-left {
+            left: -5%;
+            bottom: 10%;
+            width: 60vmin;
+            height: 60vmin;
+            background: radial-gradient(circle, rgba(100,150,255,0.1), rgba(80,100,200,0.04));
             filter: blur(60px);
-            opacity: 0.6;
-            transition: all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            animation: gentlePulse 4s infinite alternate;
+            animation: drift 30s infinite alternate-reverse;
         }
         
-        @keyframes gentlePulse {
-            0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.5; }
-            100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; }
-        }
-        
-        .inner-glow {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40vmin;
-            height: 40vmin;
-            border-radius: 50%;
-            filter: blur(40px);
-            opacity: 0.8;
-            transition: all 0.6s ease;
+        @keyframes drift {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            100% { transform: translate(-40px, -40px) scale(1.3); opacity: 0.6; }
         }
         
         .star-field {
@@ -80,769 +72,774 @@
             position: absolute;
             background: white;
             border-radius: 50%;
-            opacity: 0;
-            animation: twinkle var(--duration) infinite alternate;
+            animation: starTwinkle var(--duration) infinite alternate;
         }
         
-        @keyframes twinkle {
+        @keyframes starTwinkle {
             0% { opacity: 0; transform: scale(0.8); }
             100% { opacity: var(--opacity); transform: scale(1.2); }
         }
         
-        .flower-of-life {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 2;
-            pointer-events: none;
-            opacity: 0.1;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-width='0.6' d='M100,20 L170,65 L170,135 L100,180 L30,135 L30,65 L100,20 Z M100,48 L148,80 L148,120 L100,152 L52,120 L52,80 L100,48 Z M100,74 L128,92 L128,108 L100,126 L72,108 L72,92 L100,74 Z'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 120px 120px;
-        }
-        
-        .sacred-circles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
-        
-        .circle-ring {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .circle-ring:nth-child(1) { width: 100vmin; height: 100vmin; }
-        .circle-ring:nth-child(2) { width: 120vmin; height: 120vmin; border-color: rgba(255,255,255,0.04); }
-        .circle-ring:nth-child(3) { width: 140vmin; height: 140vmin; border-color: rgba(255,255,255,0.03); }
-        .circle-ring:nth-child(4) { width: 160vmin; height: 160vmin; border-color: rgba(255,255,255,0.02); }
-        .circle-ring:nth-child(5) { width: 180vmin; height: 180vmin; border-color: rgba(255,255,255,0.01); }
-        
         .cosmic-container {
-            max-width: 1300px;
-            width: 100%;
+            max-width: 1100px;
             margin: 0 auto;
             position: relative;
             z-index: 10;
         }
         
-        .stellar-header {
-            margin-bottom: 30px;
+        .header {
             text-align: center;
-            border-bottom: 1px solid rgba(140, 110, 210, 0.4);
-            padding-bottom: 20px;
-            backdrop-filter: blur(8px);
-            background: rgba(5, 3, 12, 0.3);
-            border-radius: 40px;
+            margin-bottom: 35px;
+            background: rgba(5, 3, 15, 0.5);
+            backdrop-filter: blur(12px);
+            border-radius: 50px;
             padding: 25px 20px;
+            border: 1px solid rgba(200, 170, 255, 0.3);
         }
         
         .logo-container {
             display: flex;
             justify-content: center;
-            align-items: center;
             margin-bottom: 15px;
         }
         
         .your-logo {
-            max-width: 260px;
-            max-height: 90px;
-            filter: drop-shadow(0 0 20px rgba(140, 100, 220, 0.5));
-            border-radius: 16px;
+            max-width: 200px;
+            filter: drop-shadow(0 0 15px rgba(200, 170, 255, 0.6));
         }
         
         .glyph-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 12px;
         }
         
         .glyph {
-            font-size: 38px;
-            filter: drop-shadow(0 0 20px rgba(140, 100, 220, 0.6));
-            animation: glyphPulse 3s infinite alternate;
+            font-size: 32px;
+            filter: drop-shadow(0 0 12px rgba(200, 170, 255, 0.8));
+            animation: glyphFloat 3s infinite alternate;
         }
         
-        @keyframes glyphPulse {
-            0% { opacity: 0.7; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.1); }
+        @keyframes glyphFloat {
+            0% { opacity: 0.6; transform: translateY(0); }
+            100% { opacity: 1; transform: translateY(-5px); }
         }
         
         h1 {
-            font-size: clamp(2rem, 7vw, 3.2rem);
+            font-size: clamp(1.8rem, 6vw, 2.8rem);
             font-weight: 300;
-            letter-spacing: clamp(3px, 2vw, 8px);
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #ffffff, #c0b0ff, #d0b0ff);
+            letter-spacing: 4px;
+            background: linear-gradient(135deg, #ffffff, #d8c0ff, #b598ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
         
         .subtitle {
-            font-size: clamp(0.8rem, 3vw, 1rem);
-            font-weight: 300;
-            letter-spacing: clamp(2px, 1vw, 4px);
-            color: #c0b0e0;
+            color: #b8a8f0;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
         }
         
-        /* Chakra Selector */
-        .chakra-selector {
+        .input-card {
+            background: rgba(8, 6, 20, 0.65);
+            backdrop-filter: blur(15px);
+            border-radius: 36px;
+            padding: 30px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(180, 150, 255, 0.35);
+        }
+        
+        .input-group {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 35px;
-            background: rgba(10, 8, 25, 0.5);
-            backdrop-filter: blur(15px);
-            border-radius: 60px;
-            padding: 15px 20px;
-            border: 1px solid rgba(140, 110, 210, 0.3);
-        }
-        
-        .chakra-pill {
-            background: rgba(30, 25, 55, 0.7);
-            border: 1px solid rgba(100, 80, 160, 0.5);
-            border-radius: 40px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: 500;
-            backdrop-filter: blur(4px);
-        }
-        
-        .chakra-pill:hover {
-            transform: translateY(-3px);
-            filter: brightness(1.2);
-        }
-        
-        .chakra-pill.active {
-            background: rgba(138, 106, 208, 0.8);
-            border-color: #c0a0ff;
-            box-shadow: 0 0 20px currentColor;
-        }
-        
-        /* Quiz Section - Enhanced */
-        .quiz-section {
-            background: rgba(10, 8, 25, 0.7);
-            backdrop-filter: blur(15px);
-            border-radius: 32px;
-            padding: 30px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(138, 106, 208, 0.4);
-        }
-        
-        .quiz-header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        
-        .quiz-header h3 {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, #ffffff, #c0b0ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .progress-container {
-            background: rgba(30, 25, 55, 0.5);
-            border-radius: 30px;
-            height: 8px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, #8a6ad0, #c0a0ff);
-            border-radius: 30px;
-            transition: width 0.3s ease;
-        }
-        
-        .quiz-question {
-            background: rgba(20, 18, 40, 0.6);
-            border-radius: 24px;
-            padding: 25px;
+            gap: 15px;
             margin-bottom: 20px;
-            border: 1px solid rgba(138, 106, 208, 0.3);
         }
         
-        .question-text {
+        .input-field {
+            flex: 2;
+            min-width: 220px;
+        }
+        
+        .input-field input {
+            width: 100%;
+            background: rgba(15, 12, 35, 0.9);
+            border: 1px solid #6a5a9a;
+            border-radius: 60px;
+            padding: 16px 22px;
             font-size: 1.2rem;
+            color: white;
+            text-align: center;
+            letter-spacing: 2px;
             font-weight: 500;
-            margin-bottom: 20px;
-            color: #e0d0ff;
         }
         
-        .quiz-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        .input-field input:focus {
+            outline: none;
+            border-color: #c9adff;
+            box-shadow: 0 0 20px rgba(201, 173, 255, 0.3);
         }
         
-        .quiz-option {
-            background: rgba(30, 25, 55, 0.5);
-            border: 1px solid rgba(100, 80, 160, 0.4);
+        .search-btn, .random-btn {
             border-radius: 60px;
-            padding: 14px 20px;
+            padding: 16px 30px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
-            font-size: 0.95rem;
         }
         
-        .quiz-option:hover {
-            background: rgba(138, 106, 208, 0.3);
-            border-color: #8a6ad0;
-            transform: translateX(5px);
+        .search-btn {
+            background: linear-gradient(145deg, #2a1f48, #1a1238);
+            border: 1px solid #9a7ad0;
+            color: #e8dcff;
         }
         
-        .quiz-option.selected {
-            background: rgba(138, 106, 208, 0.6);
-            border-color: #c0a0ff;
-            box-shadow: 0 0 10px rgba(138, 106, 208, 0.3);
-        }
-        
-        .quiz-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 25px;
-            gap: 15px;
-        }
-        
-        .btn {
-            background: linear-gradient(145deg, #2a2048, #1a1238);
-            border: 1px solid #6a4aa0;
-            border-radius: 40px;
-            padding: 12px 28px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #d0c0ff;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(145deg, #3a2860, #221a48);
-            border-color: #8a6ad0;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(145deg, #4a3870, #322a58);
+        .search-btn:hover {
             transform: translateY(-2px);
+            background: linear-gradient(145deg, #3a2a60, #2a1a48);
+            box-shadow: 0 8px 20px rgba(138, 106, 208, 0.3);
         }
         
-        .btn-secondary {
+        .random-btn {
             background: transparent;
-            border-color: #5a4a90;
+            border: 1px solid #7a6aa0;
+            color: #c8bcff;
         }
         
-        .btn-secondary:hover {
+        .random-btn:hover {
             background: rgba(100, 80, 160, 0.3);
             transform: translateY(-2px);
         }
         
-        .quiz-results {
-            margin-top: 30px;
-            padding: 25px;
-            background: linear-gradient(145deg, rgba(138, 106, 208, 0.2), rgba(100, 80, 160, 0.1));
+        .synchronicity-note {
+            background: linear-gradient(145deg, rgba(138, 106, 208, 0.12), rgba(100, 80, 160, 0.08));
             border-radius: 24px;
+            padding: 20px;
+            border-left: 4px solid #ffd966;
+            margin-top: 15px;
+        }
+        
+        .result-card {
+            background: rgba(8, 6, 22, 0.75);
+            backdrop-filter: blur(15px);
+            border-radius: 36px;
+            border: 1px solid rgba(180, 150, 255, 0.4);
+            overflow: hidden;
+            margin-bottom: 30px;
             display: none;
-            border: 1px solid rgba(138, 106, 208, 0.4);
+            animation: fadeUp 0.6s ease;
         }
         
-        .quiz-results.show {
+        .result-card.show {
             display: block;
-            animation: fadeIn 0.5s ease;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
-        .result-chakra-card {
-            background: rgba(20, 18, 45, 0.6);
-            border-radius: 20px;
-            padding: 20px;
-            margin: 15px 0;
-            border-left: 4px solid;
-            transition: all 0.3s;
+        .result-header {
+            padding: 28px 32px 20px;
+            border-bottom: 1px solid rgba(180, 150, 255, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.2);
         }
         
-        .result-chakra-card.highlight {
-            background: rgba(138, 106, 208, 0.25);
-            transform: scale(1.01);
+        .number-display {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffdf8c, #ffc978, #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 6px;
+            font-family: monospace;
         }
         
-        .result-chakra-name {
-            font-size: 1.3rem;
+        .angel-badge {
+            background: rgba(255, 200, 100, 0.2);
+            border: 1px solid #ffc978;
+            border-radius: 40px;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+        }
+        
+        .result-content {
+            padding: 28px 32px;
+        }
+        
+        .section {
+            margin-bottom: 28px;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
             font-weight: 600;
+            color: #ffdf8c;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             gap: 10px;
+            border-left: 3px solid #ffdf8c;
+            padding-left: 14px;
         }
         
-        .severity-badge {
-            font-size: 0.7rem;
-            padding: 4px 12px;
-            border-radius: 30px;
-            background: rgba(0,0,0,0.4);
+        .meaning-text {
+            color: #e8e0ff;
+            line-height: 1.75;
         }
         
-        .severity-high { background: #8a3030; color: #ffa0a0; }
-        .severity-moderate { background: #8a6030; color: #ffd0a0; }
-        .severity-mild { background: #2a6030; color: #a0ffa0; }
-        
-        .result-recommendation {
-            margin-top: 12px;
-            font-size: 0.9rem;
-            color: #c0b0e0;
+        .dream-box {
+            background: rgba(100, 80, 160, 0.15);
+            border-radius: 24px;
+            padding: 22px;
+            margin: 20px 0;
+            border: 1px solid rgba(180, 150, 255, 0.3);
         }
         
-        .chakra-detail {
-            background: rgba(10, 8, 25, 0.75);
-            backdrop-filter: blur(20px);
-            border-radius: 40px;
-            border: 1px solid rgba(140, 110, 210, 0.4);
-            overflow: hidden;
-            margin-bottom: 30px;
+        .dream-box .section-title {
+            border-left-color: #b090ff;
+            color: #c8b0ff;
         }
         
-        .chakra-header {
-            padding: 30px 30px 20px;
-            border-bottom: 1px solid rgba(140, 110, 210, 0.3);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+        .dream-interpretation {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(180, 150, 255, 0.3);
         }
         
-        .chakra-name { font-size: 2rem; font-weight: 500; background: linear-gradient(135deg, #ffffff, #c0b0ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .chakra-sanskrit { font-size: 1rem; color: #b0a0e0; font-style: italic; }
-        .color-dot { width: 20px; height: 20px; border-radius: 50%; }
-        .chakra-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; padding: 20px 30px; background: rgba(0,0,0,0.3); }
-        .stat-item { text-align: center; }
-        .stat-label { font-size: 0.7rem; text-transform: uppercase; color: #b0a0e0; }
-        .stat-value { font-size: 1rem; font-weight: 600; color: white; margin-top: 4px; }
-        .chakra-content { padding: 25px 30px; }
-        .section-title { font-size: 1.2rem; font-weight: 500; color: #e0c0ff; margin: 20px 0 15px; border-left: 3px solid currentColor; padding-left: 15px; }
-        .symptom-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 15px 0; }
-        .symptom-item { background: rgba(255,255,255,0.08); padding: 8px 15px; border-radius: 20px; font-size: 0.85rem; }
-        .crystal-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
-        .crystal-tag { background: rgba(138, 106, 208, 0.25); border: 1px solid rgba(138, 106, 208, 0.5); border-radius: 30px; padding: 6px 14px; font-size: 0.8rem; }
-        .affirmation-box { background: linear-gradient(145deg, rgba(138, 106, 208, 0.2), rgba(100, 80, 160, 0.1)); border-left: 4px solid; padding: 20px; border-radius: 20px; margin: 20px 0; font-style: italic; }
-        .mantra { font-size: 2rem; font-weight: 500; text-align: center; letter-spacing: 8px; color: #ffbc6c; margin: 20px 0; text-shadow: 0 0 20px rgba(255, 188, 108, 0.5); }
-        .meditation-guide { background: linear-gradient(145deg, rgba(40, 35, 70, 0.5), rgba(20, 18, 45, 0.7)); border-radius: 20px; padding: 20px; margin: 15px 0; border: 1px solid rgba(138, 106, 208, 0.3); }
+        .dream-scenario {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 18px;
+            padding: 15px;
+            margin: 12px 0;
+            font-style: italic;
+        }
         
-        .cosmic-footer {
-            margin-top: 40px;
+        .where-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .breakdown-box {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            padding: 18px;
+            margin: 18px 0;
+        }
+        
+        .affirmation-box {
+            background: linear-gradient(145deg, rgba(138, 106, 208, 0.2), rgba(100, 80, 160, 0.1));
+            border-radius: 24px;
+            padding: 22px;
+            margin-top: 25px;
+            text-align: center;
+            border: 1px solid rgba(255, 223, 140, 0.3);
+        }
+        
+        .jung-quote {
+            margin-top: 25px;
+            padding: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.85rem;
+            color: #a8a0d0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+        }
+        
+        .footer {
             text-align: center;
             color: #6a5a90;
-            font-size: 0.8rem;
-            border-top: 1px solid #2a2048;
+            font-size: 0.75rem;
+            margin-top: 45px;
             padding-top: 20px;
+            border-top: 1px solid #2a2048;
         }
         
-        @media (max-width: 700px) {
-            .chakra-header { flex-direction: column; align-items: flex-start; }
-            .chakra-name { font-size: 1.5rem; }
-            .quiz-question { padding: 18px; }
-            .question-text { font-size: 1rem; }
+        @media (max-width: 680px) {
+            .input-group { flex-direction: column; }
+            .number-display { font-size: 2.2rem; letter-spacing: 3px; }
+            .result-header { flex-direction: column; align-items: flex-start; }
+            .section-title { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
-    <div class="orb-background" id="orbBackground">
-        <div class="glowing-orb" id="glowingOrb"></div>
-        <div class="inner-glow" id="innerGlow"></div>
+    <div class="celestial-bg">
+        <div class="glowing-orb"></div>
+        <div class="glowing-orb-left"></div>
     </div>
     <div class="star-field" id="starField"></div>
-    <div class="flower-of-life"></div>
-    <div class="sacred-circles">
-        <div class="circle-ring"></div><div class="circle-ring"></div><div class="circle-ring"></div><div class="circle-ring"></div><div class="circle-ring"></div>
-    </div>
     
     <div class="cosmic-container">
-        <div class="stellar-header">
-            <div class="logo-container"><img src="https://i.ibb.co/qLvdSn6z/Green-Logo-Glow.png" alt="Logo" class="your-logo"></div>
-            <div class="glyph-container"><span class="glyph">🌀</span><span class="glyph">👁️</span><span class="glyph">🌀</span></div>
-            <h1>CHAKRA HEALING GUIDE</h1>
-            <div class="subtitle">✦ COMPLETE ASSESSMENT · PERSONALIZED HEALING ✦</div>
-        </div>
-
-        <div class="chakra-selector" id="chakraSelector">
-            <div class="chakra-pill" data-chakra="root" data-color="#d44c2f">🌍 ROOT</div>
-            <div class="chakra-pill" data-chakra="sacral" data-color="#ff8c42">💧 SACRAL</div>
-            <div class="chakra-pill" data-chakra="solar" data-color="#ffd966">🔥 SOLAR</div>
-            <div class="chakra-pill" data-chakra="heart" data-color="#6bcb6b">💚 HEART</div>
-            <div class="chakra-pill" data-chakra="throat" data-color="#6b9eff">🗣 THROAT</div>
-            <div class="chakra-pill" data-chakra="third" data-color="#9b6bff">👁️ THIRD EYE</div>
-            <div class="chakra-pill" data-chakra="crown" data-color="#d46bff">👑 CROWN</div>
-        </div>
-
-        <div id="chakraDetail"></div>
-
-        <div class="quiz-section" id="quizSection">
-            <div class="quiz-header">
-                <h3>🌀 COMPLETE CHAKRA ASSESSMENT</h3>
-                <p>Answer these 28 questions to identify which chakras need attention and their severity level</p>
+        <div class="header">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/qLvdSn6z/Green-Logo-Glow.png" alt="Logo" class="your-logo">
             </div>
-            <div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
-            <div id="quizContainer"></div>
-            <div class="quiz-navigation">
-                <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()" style="display:none;">← Previous</button>
-                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next →</button>
-                <button class="btn btn-primary" id="submitBtn" onclick="submitQuiz()" style="display:none;">✨ COMPLETE ASSESSMENT ✨</button>
+            <div class="glyph-container">
+                <span class="glyph">🌀</span>
+                <span class="glyph">👁️</span>
+                <span class="glyph">✨</span>
             </div>
-            <div id="quizResults" class="quiz-results"></div>
+            <h1>ANGEL NUMBER DECODER</h1>
+            <div class="subtitle">✦ DEEP SYNCHRONICITY · DREAM INTERPRETATION · DIVINE GUIDANCE ✦</div>
         </div>
-
-        <div class="cosmic-footer">
-            <div>🌀 COMPLETE CHAKRA ASSESSMENT · 28 QUESTIONS · 7 CHAKRAS  👁️</div>
-            <div class="footnote">Based on Alcantara · Morgan · Traditional Wisdom</div>
-       	   <div class="footnote">Copyright © 2026 Awakened Sways LLC</div>
-           <div class="footnote">All Rights Reserved</div>
-    </div>
+        
+        <div class="input-card">
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" id="numberInput" placeholder="Enter any number (0-999) ..." maxlength="3">
+                </div>
+                <button class="search-btn" onclick="decodeNumber()">🔮 DECODE MESSAGE</button>
+                <button class="random-btn" onclick="randomNumber()">🎲 RANDOM ANGEL NUMBER</button>
+            </div>
+            <div class="synchronicity-note">
+                <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "Meaningful coincidences are not mere chance. When you notice repeating numbers, the unconscious is communicating with the conscious. The number you see is a bridge between your inner world and the outer reality. What were you thinking? What were you feeling? That is where the personal message lives."
+            </div>
+        </div>
+        
+        <div id="result" class="result-card"></div>
+        
+        <div class="footer">
+            <div>🌀 DOREEN VIRTUE'S ANGEL NUMBERS · JUNGIAN SYNCHRONICITY · DREAM ANALYSIS  👁️</div>
+            <div class="footnote">Numbers 0-999 · Deep Meanings · Dream Scenarios · Where & When They Appear</div>
+        </div>
     </div>
 
     <script>
-        // ==================== COLOR MAP ====================
-        const chakraColors = {
-            root: { main: "#d44c2f", glow: "#ff6b4a", inner: "#ff8c6b" },
-            sacral: { main: "#ff8c42", glow: "#ffaa66", inner: "#ffcc88" },
-            solar: { main: "#ffd966", glow: "#ffe68c", inner: "#fff2b0" },
-            heart: { main: "#6bcb6b", glow: "#8ce08c", inner: "#b0f0b0" },
-            throat: { main: "#6b9eff", glow: "#8cb8ff", inner: "#b0d0ff" },
-            third: { main: "#9b6bff", glow: "#b58cff", inner: "#d0b0ff" },
-            crown: { main: "#d46bff", glow: "#e68cff", inner: "#f8b0ff" }
-        };
-
-        // ==================== 28 QUESTIONS (4 per chakra) ====================
-        const quizQuestions = [
-            // ROOT CHAKRA (4 questions)
-            { text: "I often feel anxious or fearful about money, housing, or basic survival needs.", chakra: "root", weight: 2 },
-            { text: "I feel disconnected from my body or have trouble feeling grounded and present.", chakra: "root", weight: 2 },
-            { text: "I experience chronic lower back pain, sciatica, or leg issues.", chakra: "root", weight: 1 },
-            { text: "I struggle with feeling safe in the world or trusting that I'll be okay.", chakra: "root", weight: 2 },
-            // SACRAL CHAKRA (4 questions)
-            { text: "I feel creatively blocked or struggle to express myself artistically.", chakra: "sacral", weight: 2 },
-            { text: "I carry guilt or shame around my sexuality or desires.", chakra: "sacral", weight: 2 },
-            { text: "I have difficulty experiencing pleasure or feel numb emotionally.", chakra: "sacral", weight: 2 },
-            { text: "I struggle with intimacy or have relationship issues that feel repetitive.", chakra: "sacral", weight: 1 },
-            // SOLAR PLEXUS CHAKRA (4 questions)
-            { text: "I struggle with low self-esteem or feel I'm not good enough.", chakra: "solar", weight: 2 },
-            { text: "I often feel powerless or like I have no control over my life.", chakra: "solar", weight: 2 },
-            { text: "I have digestive issues like IBS, indigestion, or stomach pain.", chakra: "solar", weight: 1 },
-            { text: "I seek approval from others and fear criticism intensely.", chakra: "solar", weight: 1 },
-            // HEART CHAKRA (4 questions)
-            { text: "I struggle to give or receive love freely and openly.", chakra: "heart", weight: 2 },
-            { text: "I carry grief, heartache, or resentment from past relationships.", chakra: "heart", weight: 2 },
-            { text: "I feel disconnected from myself or others, often lonely.", chakra: "heart", weight: 2 },
-            { text: "I find it hard to forgive myself or others for past hurts.", chakra: "heart", weight: 1 },
-            // THROAT CHAKRA (4 questions)
-            { text: "I struggle to speak my truth or express how I really feel.", chakra: "throat", weight: 2 },
-            { text: "I often feel unheard, dismissed, or that my voice doesn't matter.", chakra: "throat", weight: 2 },
-            { text: "I have chronic sore throats, thyroid issues, or neck tension.", chakra: "throat", weight: 1 },
-            { text: "I hold back what I want to say to avoid conflict or please others.", chakra: "throat", weight: 2 },
-            // THIRD EYE CHAKRA (4 questions)
-            { text: "I don't trust my intuition or have trouble hearing my inner voice.", chakra: "third", weight: 2 },
-            { text: "I overthink everything and struggle to quiet my mind.", chakra: "third", weight: 2 },
-            { text: "I have frequent headaches, sinus issues, or vision problems.", chakra: "third", weight: 1 },
-            { text: "I feel disconnected from my spiritual side or purpose in life.", chakra: "third", weight: 1 },
-            // CROWN CHAKRA (4 questions)
-            { text: "I feel disconnected from the divine, source, or something greater.", chakra: "crown", weight: 2 },
-            { text: "I struggle to find meaning or purpose in my life.", chakra: "crown", weight: 2 },
-            { text: "I experience chronic exhaustion, depression, or feel spiritually empty.", chakra: "crown", weight: 2 },
-            { text: "I have difficulty meditating or quieting my mind.", chakra: "crown", weight: 1 }
-        ];
-
-        let userAnswers = new Array(quizQuestions.length).fill(null);
-        let currentQuestion = 0;
-
-        // ==================== CHAKRA DATA ====================
-        const chakraData = {
-            root: { name: "Root Chakra", sanskrit: "Muladhara", location: "Base of spine", color: "Red", element: "Earth", mantra: "LAM", gland: "Adrenals", governs: "Survival, security, grounding", balanced: "Safe, grounded, secure", blocked: "Fear, anxiety, insecurity", crystals: ["Ruby", "Garnet", "Black Tourmaline", "Red Jasper"], essentialOils: ["Vetiver", "Patchouli", "Sandalwood"], yogaPoses: ["Warrior", "Tree Pose", "Child's Pose"], affirmation: "I am safe and grounded.", ritual: "Walk barefoot on earth, connect with nature daily." },
-            sacral: { name: "Sacral Chakra", sanskrit: "Svadhisthana", location: "Lower abdomen", color: "Orange", element: "Water", mantra: "VAM", gland: "Ovaries/Testicles", governs: "Creativity, emotions, sexuality", balanced: "Creative flow, emotional balance", blocked: "Creative blocks, guilt, shame", crystals: ["Carnelian", "Moonstone", "Orange Calcite"], essentialOils: ["Ylang ylang", "Sandalwood", "Rosewood"], yogaPoses: ["Bound Angle", "Pigeon", "Goddess"], affirmation: "I honor my emotions and creativity.", ritual: "Dance freely, take a warm bath, express yourself creatively." },
-            solar: { name: "Solar Plexus Chakra", sanskrit: "Manipura", location: "Upper abdomen", color: "Yellow", element: "Fire", mantra: "RAM", gland: "Pancreas", governs: "Personal power, confidence, will", balanced: "Confident, strong will", blocked: "Low self-esteem, powerlessness", crystals: ["Citrine", "Tiger's Eye", "Yellow Calcite"], essentialOils: ["Lemon", "Rosemary", "Lavender"], yogaPoses: ["Boat Pose", "Sun Salutations", "Twists"], affirmation: "I am powerful and confident.", ritual: "Stand in Warrior pose, light a yellow candle, affirm your worth." },
-            heart: { name: "Heart Chakra", sanskrit: "Anahata", location: "Center of chest", color: "Green", element: "Air", mantra: "YAM", gland: "Thymus", governs: "Love, compassion, connection", balanced: "Loving, open-hearted", blocked: "Grief, loneliness, resentment", crystals: ["Rose Quartz", "Emerald", "Green Aventurine"], essentialOils: ["Rose", "Geranium", "Bergamot"], yogaPoses: ["Camel", "Cobra", "Fish Pose"], affirmation: "I am love, I give and receive love freely.", ritual: "Place rose quartz on heart, practice forgiveness, open your heart." },
-            throat: { name: "Throat Chakra", sanskrit: "Vishuddha", location: "Throat", color: "Blue", element: "Sound", mantra: "HAM", gland: "Thyroid", governs: "Communication, truth, expression", balanced: "Authentic expression, clear communication", blocked: "Fear of speaking, silenced", crystals: ["Aquamarine", "Lapis Lazuli", "Sodalite"], essentialOils: ["Lavender", "Frankincense", "Rosemary"], yogaPoses: ["Shoulderstand", "Fish Pose", "Neck rolls"], affirmation: "I speak my truth with clarity and love.", ritual: "Sing, chant, write your truth, wear blue." },
-            third: { name: "Third Eye Chakra", sanskrit: "Ajna", location: "Between eyebrows", color: "Indigo", element: "Light", mantra: "OM", gland: "Pineal", governs: "Intuition, insight, wisdom", balanced: "Clear intuition, inner knowing", blocked: "Overthinking, distrust of intuition", crystals: ["Amethyst", "Lapis Lazuli", "Fluorite"], essentialOils: ["Lavender", "Frankincense", "Sandalwood"], yogaPoses: ["Child's Pose", "Forward Fold", "Meditation"], affirmation: "I trust my intuition and inner wisdom.", ritual: "Keep a dream journal, meditate daily, reduce screen time." },
-            crown: { name: "Crown Chakra", sanskrit: "Sahasrara", location: "Top of head", color: "Violet", element: "Divine Consciousness", mantra: "OM", gland: "Pituitary", governs: "Spiritual connection, enlightenment", balanced: "Connected to divine, inner peace", blocked: "Disconnection, spiritual emptiness", crystals: ["Clear Quartz", "Selenite", "Amethyst"], essentialOils: ["Frankincense", "Lotus", "Sandalwood"], yogaPoses: ["Headstand", "Meditation", "Corpse Pose"], affirmation: "I am connected to all that is.", ritual: "Silent meditation, gratitude practice, connect with nature." }
-        };
-
-        // ==================== RENDER QUIZ ====================
-        function renderCurrentQuestion() {
-            const container = document.getElementById('quizContainer');
-            const q = quizQuestions[currentQuestion];
-            const selectedValue = userAnswers[currentQuestion];
-            
-            const options = [
-                { value: 3, label: "🔥 Strongly Agree — This resonates deeply with me" },
-                { value: 2, label: "🌙 Somewhat Agree — I experience this often" },
-                { value: 1, label: "💧 Neutral / Sometimes — I notice this occasionally" },
-                { value: 0, label: "✨ Disagree — This rarely or never applies to me" }
-            ];
-            
-            let html = `<div class="quiz-question">
-                <div class="question-text">${currentQuestion + 1}. ${q.text}</div>
-                <div class="quiz-options">`;
-            
-            options.forEach(opt => {
-                const isSelected = selectedValue === opt.value;
-                html += `<div class="quiz-option ${isSelected ? 'selected' : ''}" data-value="${opt.value}">
-                            <span style="font-size:1.2rem; margin-right:10px;">${opt.label.substring(0,2)}</span> ${opt.label}
-                         </div>`;
-            });
-            html += `</div></div>`;
-            container.innerHTML = html;
-            
-            document.querySelectorAll('.quiz-option').forEach(el => {
-                el.addEventListener('click', function() {
-                    const value = parseInt(this.dataset.value);
-                    userAnswers[currentQuestion] = value;
-                    document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
-                    this.classList.add('selected');
-                });
-            });
-            
-            updateProgress();
-            updateButtons();
+        // ==================== COMPLETE DREAM-ENHANCED ANGEL NUMBER DATABASE ====================
+        
+        function getNumberWord(n) {
+            const words = {
+                0: "infinite potential, divine connection, spiritual awakening",
+                1: "new beginnings, leadership, manifestation, self-belief",
+                2: "balance, partnership, harmony, faith, trust",
+                3: "creativity, expression, ascended masters, joy, expansion",
+                4: "stability, foundation, angels, protection, hard work",
+                5: "freedom, change, adventure, transformation, growth",
+                6: "harmony, family, responsibility, service, love",
+                7: "spiritual awakening, intuition, wisdom, inner knowing",
+                8: "abundance, prosperity, power, karma, infinity",
+                9: "completion, humanitarianism, soul purpose, endings"
+            };
+            return words[n] || "divine guidance and spiritual support";
         }
         
-        function updateProgress() {
-            const answered = userAnswers.filter(a => a !== null).length;
-            const percent = (answered / quizQuestions.length) * 100;
-            document.getElementById('progressBar').style.width = `${percent}%`;
+        function getDreamArchetype(num) {
+            const archetypes = {
+                0: "the Cosmic Void — you're being called to connect with the infinite. Dreams of open space, stars, or emptiness suggest a need for spiritual grounding.",
+                1: "the Pioneer — dreams of starting something new, climbing mountains, or being first indicate you're ready to lead.",
+                2: "the Peacemaker — dreams of bridges, meetings, or partnerships suggest you're seeking harmony.",
+                3: "the Creator — dreams of art, performance, or joyful gatherings show your creative energy is flowing.",
+                4: "the Builder — dreams of construction, organizing, or grounding work suggest you're building foundations.",
+                5: "the Adventurer — dreams of travel, movement, or exploration indicate you're ready for change.",
+                6: "the Nurturer — dreams of home, family, or caregiving show your heart is opening.",
+                7: "the Seeker — dreams of libraries, temples, or quiet contemplation show you're seeking wisdom.",
+                8: "the Master — dreams of wealth, success, or leadership show your power is awakening.",
+                9: "the Humanitarian — dreams of helping others, completing cycles, or releasing show you're fulfilling purpose."
+            };
+            return archetypes[num] || "your soul is communicating through symbolic imagery. Pay attention to the emotions in the dream.";
         }
         
-        function updateButtons() {
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const submitBtn = document.getElementById('submitBtn');
+        function getDreamScenarios(num, digits) {
+            const scenarios = {
+                single: `When ${num} appears in dreams, it often manifests as a single prominent number — on a clock, a door, a ticket. The dream is asking you to pay attention to ${getNumberWord(num).split(',')[0]} in your waking life. What area of your life needs ${num === 1 ? 'a fresh start' : num === 2 ? 'more balance' : num === 3 ? 'creative expression' : num === 4 ? 'structure' : num === 5 ? 'freedom' : num === 6 ? 'heart-centered care' : num === 7 ? 'introspection' : num === 8 ? 'abundance' : num === 9 ? 'completion' : 'attention'}?`,
+                repeating: `Dreaming of repeating ${num}${num}${num} is a powerful sign. The number often appears on clocks (${num}:${num}${num}), in sequences, or as a count. This dream indicates that the message is urgent and amplified. ${num === 1 ? 'Your thoughts are manifesting instantly.' : num === 2 ? 'Trust the process completely.' : num === 3 ? 'The ascended masters are with you.' : num === 4 ? 'Angels surround you.' : num === 5 ? 'Major transformation is here.' : num === 6 ? 'Balance material and spiritual.' : num === 7 ? 'You are on the right path.' : num === 8 ? 'Abundance is flowing.' : num === 9 ? 'Complete and begin anew.' : 'The universe is speaking loudly.'}`,
+                sequential: `Dreaming of sequential numbers like ${digits[0]}${digits[1]}${digits[2]} suggests a journey or progression. The dream is showing you a path: from ${getNumberWord(digits[0]).split(',')[0]} through ${getNumberWord(digits[1]).split(',')[0]} to ${getNumberWord(digits[2]).split(',')[0]}. What stage of your life does this represent?`
+            };
             
-            prevBtn.style.display = currentQuestion > 0 ? 'block' : 'none';
-            
-            if (currentQuestion === quizQuestions.length - 1) {
-                nextBtn.style.display = 'none';
-                submitBtn.style.display = 'block';
+            if (digits.length === 3 && digits[0] === digits[1] && digits[1] === digits[2]) {
+                return scenarios.repeating;
+            } else if (digits.length === 3 && digits[0] + 1 === digits[1] && digits[1] + 1 === digits[2]) {
+                return scenarios.sequential;
             } else {
-                nextBtn.style.display = 'block';
-                submitBtn.style.display = 'none';
+                return scenarios.single;
             }
         }
         
-        function nextQuestion() {
-            if (userAnswers[currentQuestion] === null) {
-                alert("Please answer the question before continuing.");
-                return;
-            }
-            if (currentQuestion < quizQuestions.length - 1) {
-                currentQuestion++;
-                renderCurrentQuestion();
-            }
+        function getDreamSymbols(num) {
+            const symbols = {
+                1: "⛰️ mountains, sunrise, candles, keys, crowns, eagles",
+                2: "🌉 bridges, pairs, mirrors, scales, doves, yin-yang",
+                3: "🎨 rainbows, triangles, musical notes, butterflies, children",
+                4: "🏠 squares, trees, foundations, gardens, crystals",
+                5: "🦋 wings, roads, wind, stars, birds in flight",
+                6: "💝 hearts, roses, family gatherings, nests, circles",
+                7: "🔮 owls, books, temples, spirals, quiet waters",
+                8: "💰 infinity symbols, wheels, coins, labyrinths, golden light",
+                9: "🌅 sunsets, completion, doorways, release, doves"
+            };
+            return symbols[num] || "✨ symbols that speak to your soul — trust your intuition";
         }
         
-        function prevQuestion() {
-            if (currentQuestion > 0) {
-                currentQuestion--;
-                renderCurrentQuestion();
+        // Core angel number meanings with expanded dream interpretations
+        const angelNumbers = {
+            0: { 
+                meaning: "God is speaking to you. The zero represents the endless circle of Omega — without beginning or end. Divine reassurance is being sent. This is a call to connect with your spiritual source and trust that you are never alone. The zero amplifies the energy of any number it appears with, magnifying its message.",
+                dream: "Dreaming of zeros often manifests as circles, rings, clocks, or empty spaces. The zero in dreams represents infinite potential, the womb of creation, or feeling the presence of the divine watching over you. If you see a clock at 12:00 or 0:00 in a dream, you're being asked to reset — to return to your spiritual center. Empty rooms or vast open spaces in dreams carry the zero's message of new beginnings and limitless possibility.",
+                where: "You may see zeros on license plates (especially with repeating zeros), digital clocks at 12:00, price tags ending in .00, or phone numbers with multiple zeros. Each appearance is a reminder that the divine is present and you are supported.",
+                affirmation: "I am connected to the infinite source of love and wisdom. Divine guidance flows through me. I am never alone."
+            },
+            1: { 
+                meaning: "Stay positive! Your thoughts are materializing rapidly. The number 1 is a powerful manifestation sign — what you focus on is coming into form. This is a call to monitor your thoughts and ensure you're focusing only on what you truly desire, not what you fear. New beginnings are on the horizon, and your leadership is needed.",
+                dream: "When 1 appears in dreams, it often manifests as a single door, a solitary figure, a first-place award, or being alone in a meaningful way. These dreams indicate you're being called to lead, to start something new, or to embrace your individuality. Dreams of being first, winning, or standing alone in strength reflect the 1's energy. If you dream of a clock showing 1:11 or 11:11, it's a powerful manifestation portal opening in your life.",
+                where: "You may notice 1 on clocks (especially 1:11), in addresses, on receipts, or as the first page number you open to. Repeating 1's are especially potent manifestation signs.",
+                affirmation: "I am a co-creator with the universe. My positive thoughts manifest my dreams. I embrace new beginnings with courage."
+            },
+            2: { 
+                meaning: "Everything is working out for your highest good. Keep the faith and trust the process. The number 2 represents balance, partnership, and faith. Your prayers are being heard, and the angels are asking you to trust that the right people and circumstances are aligning. Patience is your ally now.",
+                dream: "In dreams, 2 appears as pairs — two people, two paths, two doors, or a mirror image. Dreams of choosing between two options, reconciling opposites, or finding balance reflect the 2's energy. Seeing 2:22 on a dream clock is a powerful sign that you are in divine alignment. Dreams of partnerships, weddings, or collaborations suggest that the right connections are forming.",
+                where: "Watch for 2 on clocks (2:22), in phone numbers, or appearing twice in a row. These are gentle reminders to trust and have faith.",
+                affirmation: "I trust that everything is unfolding perfectly for my highest good. I am in balance and harmony."
+            },
+            3: { 
+                meaning: "The ascended masters are with you, helping you stay positive and aligned with your highest purpose. The number 3 connects you to spiritual teachers, guides, and enlightened beings who are supporting your creative expression and joyful expansion. Your prayers have been heard, and the masters are assisting you.",
+                dream: "Dreams with 3 often feature groups of three (three guides, three paths, three gifts), triangles, or triple appearances. Seeing 3:33 on a dream clock is a direct sign that ascended masters are near. Dreams of teaching, being guided, or receiving wisdom reflect the 3's energy. If you dream of a spiritual teacher, artist, or healer, you're being supported in your creative and spiritual growth.",
+                where: "3 appears on clocks (3:33), as triple numbers, or in sequences. When you see it, know that ascended masters are close.",
+                affirmation: "I am guided and protected by ascended masters who love me unconditionally. My creativity flows freely."
+            },
+            4: { 
+                meaning: "The angels are surrounding you, offering love, protection, and guidance. You are not alone. The number 4 represents angelic presence, stability, and practical support. Your prayers are being answered, and the angels are helping you build a solid foundation. Trust that you have all the support you need.",
+                dream: "In dreams, 4 appears as squares, houses, foundations, or four walls. Dreams of being protected, guided, or surrounded by loving light reflect the 4's energy. Seeing 4:44 on a dream clock is a powerful sign that angels are with you. Dreams of angels, guardians, or safe places indicate divine protection.",
+                where: "You'll notice 4 on clocks (4:44), in addresses, on receipts. Repeated 4's are a strong sign of angelic presence.",
+                affirmation: "I am surrounded by loving angels who guide and protect me. I am safe and supported."
+            },
+            5: { 
+                meaning: "A significant change is occurring, always for the better. Embrace transformation with open arms. The number 5 represents freedom, adventure, and positive life changes. Your prayers for growth and expansion are being answered. Let go of the old and trust that what's coming is better.",
+                dream: "Dreams with 5 often involve travel, movement, wings, or doors opening. Seeing 5:55 on a dream clock signals major transformation. Dreams of flying, leaving, or arriving at new destinations reflect the 5's energy. If you dream of a journey or a significant change, your life is about to shift in positive ways.",
+                where: "Watch for 5 on clocks (5:55), in prices, or as a repeating sequence. It's a sign that change is coming.",
+                affirmation: "I welcome positive change and growth into my life with grace and excitement. I am free."
+            },
+            6: { 
+                meaning: "Don't worry about material matters. Release financial fears to the angels and trust that your needs are met. The number 6 represents balance between material and spiritual, family harmony, and responsibility. Your prayers for provision are answered.",
+                dream: "Dreams with 6 often involve home, family, children, or nurturing. Seeing 6:66 (or 6:66 on a digital clock is 6:06? Actually 6:66 doesn't exist — but 6:06 or 6:36) reflects the 6's energy. Dreams of caring for others, home renovations, or family gatherings indicate that your foundation is being strengthened.",
+                where: "6 appears on clocks (6:06, 6:36), in prices, or as a sequence. It's a reminder that your needs are met.",
+                affirmation: "All my material needs are met abundantly. I release all worry and trust in divine provision."
+            },
+            7: { 
+                meaning: "You are on the right path! Divine magic is supporting you and opening doors of opportunity. The number 7 represents spiritual awakening, inner wisdom, and divine guidance. Your intuition is strong, and you're being guided toward your highest good. Trust your inner knowing.",
+                dream: "In dreams, 7 appears as books, temples, owls, or quiet contemplation. Seeing 7:77 (or 7:07, 7:17) on a dream clock is a sign of spiritual alignment. Dreams of studying, meditating, or receiving wisdom reflect the 7's energy. If you dream of a spiritual teacher, a library, or a sacred space, you're being guided to trust your intuition.",
+                where: "7 appears on clocks (7:07), in addresses, or as a repeating sequence. It's confirmation you're on the right path.",
+                affirmation: "I am on the right path. Miracles are unfolding in my life. I trust my intuition."
+            },
+            8: { 
+                meaning: "Abundance and prosperity are flowing to you. The infinite loops signify endless flow of money, time, and resources. The number 8 represents karma, abundance, and manifestation. Your prayers for provision and success are being answered. Open your arms to receive.",
+                dream: "Dreams with 8 often feature infinity symbols, wheels, coins, or cycles. Seeing 8:88 (or 8:08, 8:18) on a dream clock is a powerful prosperity sign. Dreams of wealth, success, or completion reflect the 8's energy. If you dream of receiving money, achieving a goal, or completing a cycle, abundance is flowing.",
+                where: "8 appears on clocks (8:08), in prices, or as a repeating sequence. It's a sign of abundance.",
+                affirmation: "I am a magnet for abundance. Prosperity flows to me effortlessly from expected and unexpected sources."
+            },
+            9: { 
+                meaning: "Get to work on your life purpose! You've completed the prerequisites. Stop procrastinating and take action. The number 9 represents completion, humanitarian service, and soul purpose. Your prayers to find meaningful work are answered. Step into your calling.",
+                dream: "In dreams, 9 appears as doorways, sunsets, completions, or releases. Seeing 9:99 (or 9:09, 9:19) on a dream clock signals that a cycle is ending. Dreams of finishing projects, helping others, or moving to the next phase reflect the 9's energy. If you dream of graduating, completing a journey, or letting go, you're ready for your purpose.",
+                where: "9 appears on clocks (9:09), in dates, or as a repeating sequence. It's time to step into your purpose.",
+                affirmation: "I am ready and willing to fulfill my divine life purpose. I step forward with courage and joy."
+            },
+            11: {
+                meaning: "Stay positive! Your thoughts are manifesting instantly. The number 11 is a master number of spiritual awakening and manifestation. Focus only on what you desire. Your thoughts are creating your reality right now, so keep them elevated.",
+                dream: "Dreaming of 11:11 is one of the most powerful spiritual signs. It often appears on clocks, in sequences, or as a significant number in dreams. This dream indicates that you're in alignment with your soul's purpose. A portal of manifestation is opening. Pay close attention to your thoughts and feelings in the dream — they're manifesting in waking life.",
+                where: "11:11 on clocks is the most common, but also on receipts, addresses, or anywhere numbers appear. It's a wake-up call to watch your thoughts.",
+                affirmation: "I am a powerful manifestor. I create my reality with intention and joy."
+            },
+            22: {
+                meaning: "Keep the faith! The angels see the positive results of your prayers. Be patient while details are worked out. 22 is a master builder number — you're creating something lasting and significant. Trust divine timing.",
+                dream: "Dreaming of 22 suggests you're building something important. It may appear as a house number, a clock time (22:22), or a significant count. This dream indicates that your foundation is solid, and the structure you're creating will stand the test of time. The angels are helping you build something meaningful.",
+                where: "22:22 on clocks, address numbers, or anywhere the master builder number appears.",
+                affirmation: "I trust divine timing. Everything is working out perfectly for my highest good."
+            },
+            33: {
+                meaning: "You have a strong connection with ascended masters who have answered your prayers. 33 is the master teacher number — you're being guided to teach, heal, and uplift others through your example.",
+                dream: "Dreaming of 33 often involves teachers, guides, or spiritual instruction. It may appear as a clock time (3:33), in sequences, or as a significant number. This dream indicates that ascended masters are working closely with you. You're being prepared to share your wisdom with others.",
+                where: "3:33 on clocks, repeating 33s in sequences. A sign of ascended master presence.",
+                affirmation: "I am connected to the highest spiritual guidance. I teach through love and example."
+            },
+            44: {
+                meaning: "Angels are everywhere around you! You are completely loved, supported, and protected. 44 is a powerful angelic sign — you're surrounded by guardian angels who are helping you with every aspect of your life.",
+                dream: "Dreaming of 44 often features angels, protectors, or safe places. It may appear as 4:44 on a clock, as a house number, or in sequences. This dream is a direct message that you're being watched over. You are never alone, and divine protection surrounds you always.",
+                where: "4:44 on clocks, addresses, license plates. A powerful sign of angelic presence.",
+                affirmation: "Angels surround me with their loving presence. I am safe, protected, and guided."
+            },
+            55: {
+                meaning: "Big, positive changes are imminent. The worst is now behind you. 55 represents transformation on all levels — what's leaving is making space for something far better.",
+                dream: "Dreaming of 55 often involves movement, change, or new horizons. It may appear as 5:55 on a clock, a flight number, or a significant count. This dream indicates that a major life transition is underway. Trust the process — the changes are leading you to your highest good.",
+                where: "5:55 on clocks, addresses, or sequences. A sign of transformation.",
+                affirmation: "I embrace positive change with courage and excitement. Something better is coming."
+            },
+            77: {
+                meaning: "Keep up the great work! Everything you're doing right now has the Midas touch. 77 is a sign that you're in perfect alignment with your highest path. Miracles are unfolding.",
+                dream: "Dreaming of 77 often features success, achievement, or spiritual breakthroughs. It may appear as 7:77 (7:07 or 7:17), as a winning number, or in sequences. This dream confirms you're on the right path. Trust your inner guidance — it's leading you exactly where you need to be.",
+                where: "7:07 on clocks, 77 on license plates, or in sequences. Confirmation you're aligned.",
+                affirmation: "I am in perfect alignment with my highest path. Miracles are unfolding."
+            },
+            88: {
+                meaning: "You have the Midas touch! Financial abundance is flowing to you right now. 88 is the abundance number — infinite loops of prosperity are opening.",
+                dream: "Dreaming of 88 often features wealth, abundance, or receiving gifts. It may appear as 8:88 (8:08 or 8:18), as a winning number, or in sequences. This dream indicates that financial blessings are on their way. Open your arms to receive.",
+                where: "8:08 on clocks, 88 on receipts, or in sequences. A powerful abundance sign.",
+                affirmation: "I am open to receiving infinite abundance in all forms. Money flows to me easily."
+            },
+            99: {
+                meaning: "This is a wake-up call! Complete old chapters and begin your life purpose work now. 99 signifies completion and the call to serve your soul mission.",
+                dream: "Dreaming of 99 often features endings, completions, or new beginnings. It may appear as 9:99 (9:09 or 9:19), as a countdown, or in sequences. This dream indicates that you've completed a major cycle. It's time to step into your purpose without delay.",
+                where: "9:09 on clocks, 99 on addresses, or in sequences. Time to step into your purpose.",
+                affirmation: "I am ready to fulfill my divine life purpose. I step forward with courage."
+            },
+            111: {
+                meaning: "Your thoughts are manifesting instantly. Keep your mindset focused on your desires. 111 is a powerful manifestation portal — what you think about, you bring about. Choose your thoughts with care.",
+                dream: "111 in dreams is a major spiritual awakening sign. It often appears as 1:11 on a dream clock, as a significant count, or repeating throughout the dream. This dream is telling you that you're a powerful manifestor. Your thoughts are creating reality rapidly. Pay attention to your inner dialogue — it's becoming your outer world.",
+                where: "1:11 on clocks, addresses, receipts — a sign that manifestation is instant.",
+                affirmation: "I am a powerful creator. My thoughts shape my reality with love and intention."
+            },
+            222: {
+                meaning: "Trust that everything is working out exactly as it's supposed to, with Divine blessings. 222 is a sign of faith, trust, and divine timing.",
+                dream: "222 in dreams suggests perfect alignment. It may appear as 2:22 on a dream clock, as a pairing of twos, or as a count. This dream is reassuring you that even if you can't see how, everything is unfolding perfectly. The right people, places, and circumstances are aligning for your highest good.",
+                where: "2:22 on clocks, phone numbers, sequences — trust the process.",
+                affirmation: "I trust the divine plan for my life. Everything is unfolding perfectly."
+            },
+            333: {
+                meaning: "You are surrounded by ascended masters who are guiding and protecting you. 333 is a sign that spiritual teachers are near, offering wisdom and support.",
+                dream: "333 in dreams often features spiritual guides, teachers, or sacred spaces. It may appear as 3:33 on a dream clock, as three of something, or as a significant count. This dream indicates that you're receiving guidance from ascended masters. Pay attention to your intuition — it's being amplified.",
+                where: "3:33 on clocks, in sequences — ascended masters are near.",
+                affirmation: "I am guided and protected by ascended masters who love me unconditionally."
+            },
+            444: {
+                meaning: "Angels are everywhere around you! You are completely loved and supported. 444 is a powerful angelic sign of protection and presence.",
+                dream: "444 in dreams is one of the most common angel signs. It often appears as 4:44 on a dream clock, as four of something, or as a count. This dream is a direct message that angels are with you. You are never alone. Divine protection surrounds you at all times.",
+                where: "4:44 on clocks, license plates, anywhere — angels are with you.",
+                affirmation: "Angels surround me with their loving presence. I am safe and protected."
+            },
+            555: {
+                meaning: "Big, positive changes are occurring. Release the old and welcome the new. 555 is a sign of major transformation.",
+                dream: "555 in dreams often involves movement, change, or new directions. It may appear as 5:55 on a dream clock, as a countdown, or as a sequence. This dream indicates that significant change is underway. What's leaving is making space for something far better. Trust the transformation.",
+                where: "5:55 on clocks, addresses — change is coming, embrace it.",
+                affirmation: "I welcome transformation and growth into my life with an open heart."
+            },
+            666: {
+                meaning: "Your thoughts are too focused on material illusions. Raise your thoughts spiritually. 666 is a call to balance material concerns with spiritual trust.",
+                dream: "666 in dreams is a gentle wake-up call. It may appear as 6:66 (6:06 or 6:36) on a dream clock, or in sequences. This dream is asking you to examine where you're focused on fear or lack. The angels are reminding you that your Source is spiritual, not material. Raise your thoughts to love and trust.",
+                where: "6:06 on clocks, sequences — a call to refocus on spirit.",
+                affirmation: "I release all worry and trust in divine abundance. I am supported in all ways."
+            },
+            777: {
+                meaning: "You are on the right path! Divine magic is supporting you and opening doors. 777 is a sign of spiritual alignment and miracles.",
+                dream: "777 in dreams is a powerful confirmation. It may appear as 7:77 (7:07 or 7:17) on a dream clock, as a winning number, or in sequences. This dream is telling you that you're exactly where you need to be. Keep going — miracles are unfolding.",
+                where: "7:07 on clocks, sequences — confirmation you're aligned.",
+                affirmation: "I am on the right path. Miracles are unfolding in my life."
+            },
+            888: {
+                meaning: "You have the Midas touch! Financial abundance is flowing to you right now. 888 is a sign of infinite prosperity.",
+                dream: "888 in dreams is a powerful abundance sign. It may appear as 8:88 (8:08 or 8:18) on a dream clock, as a winning number, or in sequences. This dream indicates that financial blessings are flowing. Open your arms to receive. Your prayers for provision are answered.",
+                where: "8:08 on clocks, receipts — abundance is yours.",
+                affirmation: "I am open to receiving infinite abundance. Money flows to me easily and freely."
+            },
+            999: {
+                meaning: "This is a wake-up call! Complete old chapters and begin your life purpose work now. 999 is a sign of completion and new beginnings.",
+                dream: "999 in dreams is a powerful call to action. It may appear as 9:99 (9:09 or 9:19) on a dream clock, as a countdown, or in sequences. This dream indicates that you've completed a major cycle. It's time to step into your life purpose without delay. The world needs your gifts now.",
+                where: "9:09 on clocks, sequences — time to step into purpose.",
+                affirmation: "I am ready to fulfill my divine life purpose. I step forward with courage and joy."
             }
-        }
+        };
         
-        function submitQuiz() {
-            if (userAnswers[currentQuestion] === null) {
-                alert("Please answer the last question before submitting.");
-                return;
-            }
-            
-            // Calculate scores per chakra
-            const scores = { root: 0, sacral: 0, solar: 0, heart: 0, throat: 0, third: 0, crown: 0 };
-            const maxScores = { root: 0, sacral: 0, solar: 0, heart: 0, throat: 0, third: 0, crown: 0 };
-            
-            quizQuestions.forEach((q, idx) => {
-                const answer = userAnswers[idx];
-                if (answer !== null) {
-                    scores[q.chakra] += answer * q.weight;
-                    maxScores[q.chakra] += 3 * q.weight;
+        function generateAllNumbers() {
+            for (let i = 0; i <= 999; i++) {
+                if (!angelNumbers[i]) {
+                    const digits = String(i).split('').map(Number);
+                    const sum = digits.reduce((a, b) => a + b, 0);
+                    const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
+                    const base = angelNumbers[reduced] || angelNumbers[digits[0]] || angelNumbers[0];
+                    
+                    let meaning = `The number ${i} combines the energies of ${digits.map(d => getNumberWord(d).split(',')[0]).join(', ')}. `;
+                    meaning += base.meaning.split('.')[0] + " This unique combination is a personal message from your angels. Pay attention to what you were thinking when you saw this number.";
+                    
+                    let dream = `When ${i} appears in dreams, consider each digit's symbolism. ${getDreamScenarios(i, digits)} ${getDreamArchetype(reduced)} `;
+                    dream += `The dream may also show ${getDreamSymbols(reduced)}. What were you feeling in the dream? That's where the personal message lives.`;
+                    
+                    let where = `You may see ${i} on clocks, receipts, license plates, or anywhere numbers appear. It's most significant when you're thinking about something important. The more you notice it, the more urgent the message.`;
+                    
+                    let affirmation = `I am open to the guidance of this number. I trust that ${getNumberWord(reduced).split(',')[0]} is supporting my highest good.`;
+                    
+                    angelNumbers[i] = { meaning, dream, where, affirmation };
                 }
-            });
-            
-            // Calculate percentages and severity
-            const results = [];
-            for (let chakra in scores) {
-                const max = maxScores[chakra];
-                const score = scores[chakra];
-                const percent = max > 0 ? (score / max) * 100 : 0;
-                let severity = "balanced";
-                let severityClass = "";
-                if (percent >= 66) { severity = "high"; severityClass = "severity-high"; }
-                else if (percent >= 33) { severity = "moderate"; severityClass = "severity-moderate"; }
-                else if (percent > 0) { severity = "mild"; severityClass = "severity-mild"; }
-                else { severity = "balanced"; severityClass = ""; }
-                
-                results.push({ chakra, percent, severity, severityClass, score, max });
-            }
-            
-            results.sort((a,b) => b.percent - a.percent);
-            
-            // Build results HTML
-            let resultsHtml = `<h3 style="margin-bottom: 20px;">📊 YOUR CHAKRA ASSESSMENT RESULTS</h3>
-                               <p style="margin-bottom: 20px;">Based on your answers, here's the current state of your 7 chakras (highest imbalance first):</p>`;
-            
-            results.forEach(r => {
-                const data = chakraData[r.chakra];
-                const color = chakraColors[r.chakra].main;
-                const severityText = r.severity === "high" ? "⚠️ SIGNIFICANT IMBALANCE - Needs immediate attention" :
-                                    r.severity === "moderate" ? "🌙 MODERATE IMBALANCE - Requires healing work" :
-                                    r.severity === "mild" ? "💧 MILD IMBALANCE - Gentle attention needed" :
-                                    "✨ BALANCED - Maintain with regular practice";
-                
-                resultsHtml += `<div class="result-chakra-card ${r.percent > 0 ? 'highlight' : ''}" style="border-left-color: ${color};">
-                    <div class="result-chakra-name">
-                        <span>${data.name}</span>
-                        <span class="severity-badge ${r.severityClass}">${r.severity.toUpperCase()} ${Math.round(r.percent)}%</span>
-                    </div>
-                    <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin: 12px 0;">
-                        <div style="width: ${r.percent}%; height: 100%; background: ${color}; border-radius: 3px;"></div>
-                    </div>
-                    <div><strong>Blocked signs:</strong> ${data.blocked}</div>
-                    <div class="result-recommendation"><strong>🌀 Healing suggestion:</strong> ${data.ritual.substring(0, 100)}...</div>
-                </div>`;
-            });
-            
-            resultsHtml += `<div style="margin-top: 25px; padding: 20px; background: rgba(138,106,208,0.2); border-radius: 20px;">
-                <strong>✨ NEXT STEPS:</strong><br>
-                1. Click on any chakra above in the colored selector to see its full healing guide<br>
-                2. Start with your highest imbalance (shown first)<br>
-                3. Practice daily meditation, use crystals, and incorporate the recommended rituals<br>
-                4. Re-take this assessment in 4-6 weeks to track your progress
-            </div>`;
-            
-            document.getElementById('quizResults').innerHTML = resultsHtml;
-            document.getElementById('quizResults').classList.add('show');
-            document.getElementById('quizSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
-            // Auto-select the highest imbalance chakra in the detail view
-            const highest = results.find(r => r.percent > 0);
-            if (highest) {
-                selectChakra(highest.chakra);
             }
         }
         
-        // ==================== UI FUNCTIONS ====================
-        function updateOrbColor(chakraId) {
-            const colors = chakraColors[chakraId] || chakraColors.root;
-            const glowingOrb = document.getElementById('glowingOrb');
-            const innerGlow = document.getElementById('innerGlow');
-            if (glowingOrb && innerGlow) {
-                glowingOrb.style.background = `radial-gradient(circle at 30% 35%, ${colors.glow}, ${colors.main}, ${colors.main}aa)`;
-                glowingOrb.style.boxShadow = `0 0 80px ${colors.glow}`;
-                innerGlow.style.background = `radial-gradient(circle at 40% 45%, ${colors.inner}, ${colors.glow}88)`;
+        function decodeNumber() {
+            let input = document.getElementById('numberInput').value.trim();
+            if (!input) {
+                alert("Please enter a number to decode.");
+                return;
             }
+            
+            let num = parseInt(input, 10);
+            if (isNaN(num)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+            
+            if (num < 0) num = Math.abs(num);
+            
+            generateAllNumbers();
+            
+            if (num > 999) {
+                const str = String(num);
+                const chunks = [];
+                for (let i = 0; i < str.length; i += 3) {
+                    chunks.push(parseInt(str.substr(i, 3), 10));
+                }
+                if (chunks.length > 1) {
+                    showMultiDigitResult(chunks);
+                    return;
+                }
+            }
+            
+            const data = angelNumbers[num] || angelNumbers[0];
+            const digits = String(num).split('').map(Number);
+            const sum = digits.reduce((a, b) => a + b, 0);
+            const reduced = sum > 9 ? String(sum).split('').reduce((a, b) => a + parseInt(b), 0) : sum;
+            const isRepeating = digits.length === 3 && digits[0] === digits[1] && digits[1] === digits[2];
+            const isSequential = digits.length === 3 && digits[0] + 1 === digits[1] && digits[1] + 1 === digits[2];
+            
+            const html = `
+                <div class="result-header">
+                    <div class="number-display">${num}</div>
+                    <div class="angel-badge">✦ ANGEL NUMBER ✦</div>
+                </div>
+                <div class="result-content">
+                    <div class="section">
+                        <div class="section-title">🔮 DIVINE MESSAGE</div>
+                        <div class="meaning-text">${data.meaning}</div>
+                    </div>
+                    
+                    <div class="dream-box">
+                        <div class="section-title">💭 DREAM INTERPRETATION</div>
+                        <div class="meaning-text">${data.dream}</div>
+                        <div class="dream-interpretation">
+                            <strong>🌙 WHAT THIS DREAM MEANS FOR YOU:</strong><br>
+                            ${getDreamArchetype(reduced)}<br><br>
+                            <strong>✨ DREAM SYMBOLS:</strong> ${getDreamSymbols(reduced)}<br><br>
+                            <strong>🔍 DREAM SCENARIO:</strong> ${getDreamScenarios(num, digits)}
+                        </div>
+                    </div>
+                    
+                    <div class="where-box">
+                        <div class="section-title">👁️ WHERE & WHEN YOU SEE IT</div>
+                        <div class="meaning-text">${data.where}</div>
+                        <div style="margin-top: 15px; padding: 12px; background: rgba(255,215,0,0.1); border-radius: 16px;">
+                            <strong>✨ JUNGIAN SYNCHRONICITY:</strong> "This number appeared when you were thinking about something meaningful. Carl Jung believed that meaningful coincidences are not chance — they are the universe communicating. What were you feeling? What were you thinking? That's where your personal message lives."
+                        </div>
+                    </div>
+                    
+                    <div class="breakdown-box">
+                        <div class="section-title">🔢 NUMEROLOGICAL BREAKDOWN</div>
+                        <div class="meaning-text">
+                            <strong>${num}</strong> = ${digits.join(' + ')} = <strong>${sum}</strong>${sum > 9 ? ` = ${String(sum).split('').join(' + ')} = <strong>${reduced}</strong>` : ''}<br>
+                            <span style="color: #ffdf8c;">The reduced energy of ${reduced} brings: ${getNumberWord(reduced)}</span><br><br>
+                            ${isRepeating ? '<strong>⚠️ REPEATING NUMBER:</strong> This is an amplified message! The angels are speaking loudly. Pay extra attention.' : ''}
+                            ${isSequential ? '<strong>📈 SEQUENTIAL NUMBER:</strong> This indicates a journey or progression. You are moving from one stage to the next.' : ''}
+                        </div>
+                    </div>
+                    
+                    <div class="affirmation-box">
+                        <strong>✨ AFFIRMATION FOR THIS MESSAGE:</strong><br>
+                        "${data.affirmation}"
+                    </div>
+                    
+                    <div class="jung-quote">
+                        <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "Meaningful coincidences are not chance. When you notice numbers repeating, your unconscious is trying to communicate. The number ${num} is a bridge between your inner world and the outer reality. What were you thinking? What were you feeling? That's where the message lives. Trust it."
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('result').innerHTML = html;
+            document.getElementById('result').classList.add('show');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function showMultiDigitResult(chunks) {
+            generateAllNumbers();
+            let html = `
+                <div class="result-header">
+                    <div class="number-display">${chunks.join(' ')}</div>
+                    <div class="angel-badge">✦ MULTI-PART MESSAGE ✦</div>
+                </div>
+                <div class="result-content">
+                    <div class="section">
+                        <div class="section-title">🔮 YOUR COMPLETE ANGEL MESSAGE</div>
+                        <div class="meaning-text">Your angel number is composed of multiple sequences. Here's what each part means:</div>
+                    </div>
+            `;
+            
+            for (let i = 0; i < chunks.length; i++) {
+                const chunk = chunks[i];
+                const data = angelNumbers[chunk] || angelNumbers[0];
+                html += `
+                    <div style="background: rgba(138, 106, 208, 0.15); border-radius: 20px; padding: 18px; margin: 15px 0; border-left: 3px solid #ffd966;">
+                        <strong style="color: #ffd966; font-size: 1.2rem;">${chunk}</strong><br>
+                        ${data.meaning.split('.')[0]}.
+                    </div>
+                `;
+            }
+            
+            html += `
+                    <div class="dream-box" style="margin-top: 20px;">
+                        <div class="section-title">💭 WHEN THESE NUMBERS APPEAR IN DREAMS</div>
+                        <div class="meaning-text">Seeing multiple numbers together in a dream suggests the universe is sending a layered message. Each number carries its own symbolism, and together they form a complete picture. Pay attention to the order they appear — it may show a sequence or progression in your life.</div>
+                    </div>
+                    
+                    <div class="affirmation-box">
+                        <strong>✨ INTEGRATED AFFIRMATION:</strong><br>
+                        "I am open to receiving the complete message the universe is sending me. I trust that all the pieces are coming together for my highest good."
+                    </div>
+                    
+                    <div class="jung-quote">
+                        <strong>🌀 CARL JUNG ON SYNCHRONICITY:</strong> "The larger the pattern, the more significant the synchronicity. When multiple numbers appear together, the universe is amplifying its message. What were you thinking? That's where your answer lies."
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('result').innerHTML = html;
+            document.getElementById('result').classList.add('show');
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function randomNumber() {
+            const num = Math.floor(Math.random() * 1000);
+            document.getElementById('numberInput').value = num;
+            decodeNumber();
         }
         
         function generateStars() {
-            const starField = document.getElementById('starField');
-            if (!starField) return;
-            starField.innerHTML = '';
-            for (let i = 0; i < 180; i++) {
+            const field = document.getElementById('starField');
+            if (!field) return;
+            field.innerHTML = '';
+            for (let i = 0; i < 150; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                const size = Math.random() * 3 + 1;
+                const size = Math.random() * 2.5 + 1;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
                 star.style.left = `${Math.random() * 100}%`;
                 star.style.top = `${Math.random() * 100}%`;
                 star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
-                star.style.setProperty('--opacity', `${Math.random() * 0.6 + 0.2}`);
-                starField.appendChild(star);
+                star.style.setProperty('--opacity', `${Math.random() * 0.5 + 0.2}`);
+                field.appendChild(star);
             }
         }
         
-        function selectChakra(chakraId) {
-            document.querySelectorAll('.chakra-pill').forEach(p => p.classList.remove('active'));
-            const activePill = Array.from(document.querySelectorAll('.chakra-pill')).find(p => p.dataset.chakra === chakraId);
-            if (activePill) activePill.classList.add('active');
-            renderChakraDetail(chakraId);
-            updateOrbColor(chakraId);
-            window.scrollTo({ top: document.getElementById('chakraDetail').offsetTop - 20, behavior: 'smooth' });
-        }
+        generateAllNumbers();
+        generateStars();
         
-        function renderChakraDetail(chakraId) {
-            const data = chakraData[chakraId];
-            if (!data) return;
-            const colors = chakraColors[chakraId];
-            const dotColor = colors.main;
-            
-            const html = `<div class="chakra-detail">
-                <div class="chakra-header">
-                    <div class="chakra-title"><span class="chakra-name">${data.name}</span><span class="chakra-sanskrit">${data.sanskrit}</span></div>
-                    <div class="chakra-color-badge"><div class="color-dot" style="background: ${dotColor}; box-shadow: 0 0 10px ${dotColor};"></div><span>${data.color}</span></div>
-                </div>
-                <div class="chakra-stats">
-                    <div class="stat-item"><div class="stat-label">LOCATION</div><div class="stat-value">${data.location}</div></div>
-                    <div class="stat-item"><div class="stat-label">ELEMENT</div><div class="stat-value">${data.element}</div></div>
-                    <div class="stat-item"><div class="stat-label">MANTRA</div><div class="stat-value">${data.mantra}</div></div>
-                    <div class="stat-item"><div class="stat-label">GLAND</div><div class="stat-value">${data.gland}</div></div>
-                </div>
-                <div class="chakra-content">
-                    <div class="section-title">🌀 GOVERNS</div><p>${data.governs}</p>
-                    <div class="section-title">⚖️ WHEN BALANCED</div><p>${data.balanced}</p>
-                    <div class="section-title">⚠️ WHEN BLOCKED</div><p>${data.blocked}</p>
-                    <div class="section-title">💎 HEALING CRYSTALS</div><div class="crystal-list">${data.crystals.map(c => `<span class="crystal-tag">${c}</span>`).join('')}</div>
-                    <div class="section-title">🌿 ESSENTIAL OILS</div><div class="crystal-list">${data.essentialOils.map(o => `<span class="crystal-tag">${o}</span>`).join('')}</div>
-                    <div class="section-title">🧘🏼 YOGA POSES</div><div class="crystal-list">${data.yogaPoses.map(p => `<span class="crystal-tag">${p}</span>`).join('')}</div>
-                    <div class="affirmation-box" style="border-left-color: ${dotColor};"><strong>✨ DAILY AFFIRMATION</strong><br>"${data.affirmation}"</div>
-                    <div class="section-title">🧘🏽‍♂️ MEDITATION & VISUALIZATION</div><div class="meditation-guide">Close your eyes, breathe deeply, and visualize a ${data.color.toLowerCase()} sphere of light spinning at your ${data.location}. Chant ${data.mantra}.</div>
-                    <div class="section-title">🕯️ SACRED RITUAL</div><div class="meditation-guide">${data.ritual}</div>
-                    <div class="mantra">${data.mantra}</div>
-                </div>
-            </div>`;
-            document.getElementById('chakraDetail').innerHTML = html;
-        }
-        
-        // Initialize
-        window.onload = function() {
-            generateStars();
-            renderCurrentQuestion();
-            renderChakraDetail('root');
-            updateOrbColor('root');
-            
-            document.querySelectorAll('.chakra-pill').forEach(pill => {
-                pill.addEventListener('click', function() {
-                    document.querySelectorAll('.chakra-pill').forEach(p => p.classList.remove('active'));
-                    this.classList.add('active');
-                    const chakraId = this.dataset.chakra;
-                    renderChakraDetail(chakraId);
-                    updateOrbColor(chakraId);
-                });
-            });
-        };
-        
-        window.nextQuestion = nextQuestion;
-        window.prevQuestion = prevQuestion;
-        window.submitQuiz = submitQuiz;
-        window.selectChakra = selectChakra;
+        document.getElementById('numberInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') decodeNumber();
+        });
     </script>
 </body>
 </html>
